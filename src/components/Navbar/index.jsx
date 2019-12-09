@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { BodyWrap } from "../../helpers/common"
-import logo from "../../img/logo.png"
-import { smallerScreen } from "../../helpers/breakpoints"
-import BurgerMenu from "../BurgerMenu"
-import { Link } from "gatsby"
+import React, { useState } from 'react'
+import styled from 'styled-components'
+import { BodyWrap } from '../../helpers/common'
+import logo from '../../img/logo.png'
+import { smallerScreen } from '../../helpers/breakpoints'
+import BurgerMenu from '../BurgerMenu'
+import { Link } from 'gatsby'
 
 const Logo = styled.img`
   max-width: 50px;
@@ -20,7 +20,7 @@ const NavbarWrapper = styled.div`
   ${smallerScreen} {
     padding: 0 20px;
   }
-`;
+`
 
 const NavbarLink = styled(Link)`
   color: #fff;
@@ -36,7 +36,7 @@ const MenuWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${smallerScreen}{
+  ${smallerScreen} {
     display: none;
   }
 `
@@ -46,7 +46,7 @@ export const ShowOnMobile = styled.div`
   ${smallerScreen} {
     display: block;
   }
-`;
+`
 
 export const MobileNavigationProps = styled.nav`
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
@@ -54,7 +54,7 @@ export const MobileNavigationProps = styled.nav`
   display: none;
   flex-direction: column;
   justify-content: center;
-  background: ${({ theme }) => "#4F2AAB"};
+  background: ${({ theme }) => '#4F2AAB'};
   height: 100vh;
   text-align: left;
   position: fixed;
@@ -92,17 +92,17 @@ export const MobileNavigationProps = styled.nav`
     color: #fff;
     text-align: center;
   }
-`;
+`
 
 const MENU_ITEMS = [
-  { name: "Home", link: "/" },
-  { name: "Contact", link: "/contact" },
-  { name: "Karaoke", link: "/karaoke" },
-  { name: "Blog", link: "/blog" },
+  { name: 'Home', link: '/' },
+  { name: 'Contact', link: '/contact' },
+  { name: 'Karaoke', link: '/karaoke' },
+  { name: 'Blog', link: '/blog' },
 ]
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <React.Fragment>
@@ -112,13 +112,15 @@ const Navbar = () => {
             <Logo src={logo} alt="" />
           </Link>
           <MenuWrapper>
-            {MENU_ITEMS.map(item =>
+            {MENU_ITEMS.map(item => (
               <NavbarLink to={item.link}>{item.name}</NavbarLink>
-            )}
+            ))}
           </MenuWrapper>
 
           <ShowOnMobile>
-            <div style={{ position: "relative", width: "32px", display: "block" }}>
+            <div
+              style={{ position: 'relative', width: '32px', display: 'block' }}
+            >
               <BurgerMenu open={open} setOpen={() => setOpen(!open)} />
             </div>
           </ShowOnMobile>
@@ -126,18 +128,16 @@ const Navbar = () => {
       </BodyWrap>
 
       <MobileNavigationProps open={open}>
-
-        {MENU_ITEMS.map(item =>
+        {MENU_ITEMS.map(item => (
           <Link to={item.link}>
             <a>{item.name}</a>
-          </Link>)
-        }
+          </Link>
+        ))}
 
         <p>Download our app!</p>
       </MobileNavigationProps>
     </React.Fragment>
   )
 }
-
 
 export default Navbar

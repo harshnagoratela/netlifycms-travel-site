@@ -1,10 +1,10 @@
 const theme = {
   colors: {
-    primary: "#4F2AAB",
-    white: "#fff",
-    black: "#000",
-    grey: "#bebebe",
-    lightGrey: "#eee",
+    primary: '#4F2AAB',
+    white: '#fff',
+    black: '#000',
+    grey: '#bebebe',
+    lightGrey: '#eee',
   },
   width: 1060,
   media: {

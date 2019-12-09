@@ -5,14 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "styled-components"
-import styled from "styled-components"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
+import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
-import theme from "../styles/theme"
-import Footer from "../components/Footer"
-
+import theme from '../styles/theme'
+import Footer from '../components/Footer'
 
 const GlobalStyle = createGlobalStyle`
  html,

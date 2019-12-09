@@ -1,17 +1,17 @@
-import React from "react"
+import React from 'react'
 // import { injectIntl } from "gatsby-plugin-intl"
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Navbar from "../components/Navbar"
-import { BodyWrap } from "../helpers/common"
-import GridImages from "../components/GridImages"
-import UpcomingEvents from "../components/UpcomingEvents"
-import StoryBox from "../components/StoryBox"
-import CtaBanner from "../components/CtaBanner"
-import Footer from "../components/Footer"
-import { smallerScreen } from "../helpers/breakpoints"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Navbar from '../components/Navbar'
+import { BodyWrap } from '../helpers/common'
+import GridImages from '../components/GridImages'
+import UpcomingEvents from '../components/UpcomingEvents'
+import StoryBox from '../components/StoryBox'
+import CtaBanner from '../components/CtaBanner'
+import Footer from '../components/Footer'
+import { smallerScreen } from '../helpers/breakpoints'
 
 const IntroBackground = styled.div`
   height: 500px;
@@ -20,8 +20,8 @@ const IntroBackground = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 0 0 0 600px;
-  background-image: linear-gradient(174deg, #A23CA0 0%, #4F2AAB 100%);
-  ${smallerScreen}{
+  background-image: linear-gradient(174deg, #a23ca0 0%, #4f2aab 100%);
+  ${smallerScreen} {
     border-radius: 0 0 0 100px;
   }
 `
@@ -30,7 +30,7 @@ const MainTitle = styled.h1`
   margin-top: 140px;
   color: #fff;
   padding: 0 20px;
-  ${smallerScreen}{
+  ${smallerScreen} {
     font-size: 1.7rem;
   }
 `
@@ -43,22 +43,21 @@ const TextIntroduction = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 100px;
-  ${smallerScreen}{
+  ${smallerScreen} {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
-
 `
 
 const TextIntroductionTitle = styled.h2`
   font-size: 30px;
-  color: rgba(0,0,0,0.96);
+  color: rgba(0, 0, 0, 0.96);
   margin-right: 40px;
 `
 
 const TextIntroductionText = styled.p`
   font-size: 17px;
-  color: rgba(0,0,0,0.66);
+  color: rgba(0, 0, 0, 0.66);
   line-height: 29px;
 `
 
@@ -68,23 +67,29 @@ const IndexPage = ({ intl }) => (
       <Navbar />
       <BodyWrap>
         <MainTitle>Have a trip to Japan ahead?</MainTitle>
-        <Subtitle>Explore, Eat, and Party with new friends on TRAVELR app.</Subtitle>
+        <Subtitle>
+          Explore, Eat, and Party with new friends on TRAVELR app.
+        </Subtitle>
       </BodyWrap>
     </IntroBackground>
 
     <BodyWrap>
       <TextIntroduction>
-        <TextIntroductionTitle>Share and experience Japan together</TextIntroductionTitle>
-        <TextIntroductionText>Life’s better with people—and now there’s a new way to meet them with local events and new app that made them possible. Every experience is selected and created by local people, so you can connect with othes easier than before.</TextIntroductionText>
+        <TextIntroductionTitle>
+          Share and experience Japan together
+        </TextIntroductionTitle>
+        <TextIntroductionText>
+          Life’s better with people—and now there’s a new way to meet them with
+          local events and new app that made them possible. Every experience is
+          selected and created by local people, so you can connect with othes
+          easier than before.
+        </TextIntroductionText>
       </TextIntroduction>
     </BodyWrap>
 
     <GridImages />
-
     <UpcomingEvents />
-
     <StoryBox />
-
     <CtaBanner />
   </Layout>
 )
