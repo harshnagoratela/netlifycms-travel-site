@@ -11,7 +11,7 @@ import { ThemeProvider } from 'styled-components'
 import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 import theme from '../styles/theme'
-import Footer from '../components/Footer'
+import Footer from './Footer'
 
 const GlobalStyle = createGlobalStyle`
  html,
