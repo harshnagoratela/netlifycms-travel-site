@@ -10,12 +10,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import styled from "styled-components"
 import { createGlobalStyle } from 'styled-components'
-
-import Header from "./header"
 import theme from "../styles/theme"
+import Footer from "../components/Footer"
 
-const Main = styled.main`
-`
 
 const GlobalStyle = createGlobalStyle`
  html,
@@ -44,14 +41,15 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
-          <Main>
+          <main>
             {children}
             {/* <footer>
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>
             </footer> */}
-          </Main>
+            <Footer />
+          </main>
         </>
       </ThemeProvider>
     </>

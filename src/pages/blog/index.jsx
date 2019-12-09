@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
-import Navbar from "../components/Navbar"
-import { BodyWrap } from "../helpers/common"
-import Footer from "../components/Footer"
-import { smallerScreen } from "../helpers/breakpoints"
-import SingleArticle from "../components/SingleArticle"
+import Layout from "../../components/Layout"
+import SEO from "../../components/seo"
+import Navbar from "../../components/Navbar"
+import { BodyWrap } from "../../helpers/common"
+import Footer from "../../components/Footer"
+import { smallerScreen } from "../../helpers/breakpoints"
+import SingleArticle from "../../components/SingleArticle"
+import BlogRoll from "../../components/BlogRoll"
 
 const BlogBackground = styled.div`
   height: 280px;
@@ -37,7 +38,7 @@ const BlogBody = styled.div`
   display: grid;
   grid-template-columns: 1fr 360px;
   grid-column-gap: 100px;
-  margin-top: 70px;
+  margin-top: 50px;
   ${smallerScreen}{
     margin-top: 20px;
     grid-template-columns: 1fr;
@@ -106,15 +107,13 @@ const Blog = () => (
       </Topics>
       <BlogBody>
         <div>
-          <SingleArticle />
-          <SingleArticle />
+          <BlogRoll />
         </div>
         <div>
           Banner
       </div>
       </BlogBody>
     </BodyWrap>
-    <Footer />
   </Layout>
 )
 

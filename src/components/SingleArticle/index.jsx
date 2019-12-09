@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 const ArticleWrap = styled.div`
   margin-bottom: 80px;
 `
 
-const Title = styled.title`
+const Title = styled.h3`
 
 `
 
@@ -24,7 +25,7 @@ const Description = styled.p`
   line-height: 24px;
 `
 
-const ReadMore = styled.a`
+const ReadMore = styled(Link)`
   font-size: 14px;
   color: #5F2EA9;
   background: none;
@@ -32,16 +33,15 @@ const ReadMore = styled.a`
   font-size: 14px;
 `
 
-const SingleArticle = () => {
-
+const SingleArticle = ({ post }) => {
   return (
     <ArticleWrap>
-      <Title>How to behave in Onsen</Title>
-      <Image src="https://enjoyonsen.city.beppu.oita.jp/wp-content/uploads/2018/06/what_main.jpg" />
+      <Title>{post.frontmatter.title}</Title>
+      <Image src={post.frontmatter.featuredimage ? post.frontmatter.featuredimage.childImageSharp.fluid.src : "https://via.placeholder.com/350x150"} />
       <Description>
-        An onsen  (温泉) is a Japanese hot spring; the term also extends to cover the bathing facilities and traditional inns frequently situated around a hot spring. As a volcanically active country, Japan has thousands of onsens scattered throughout all of its major islands.[1] Onsens come in many types and shapes, including outdoor (露天風呂 or 野天風呂 roten-buro or noten-buro) and indoor baths (内湯 uchiyu). Baths may be either publicly run by a municipality or privately, often as part of a hotel, ryokan, or bed and breakfast (民宿 minshuku).
+        {post.excerpt}
       </Description>
-      <ReadMore href="/blog/kek">
+      <ReadMore to={post.fields.slug}>
         Read full story
         </ReadMore>
     </ArticleWrap>

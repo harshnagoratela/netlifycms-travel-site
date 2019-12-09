@@ -86,8 +86,6 @@ const IndexPage = ({ intl }) => (
     <StoryBox />
 
     <CtaBanner />
-
-    <Footer />
   </Layout>
 )
 
