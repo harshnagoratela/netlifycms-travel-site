@@ -82,6 +82,16 @@ const SingleTopic = styled.div`
   }
 `
 
+const GoBack = styled(Link)`
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+`
+
+const PostTitle = styled.h1`
+  margin-top: 10px;
+`
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -106,9 +116,8 @@ export const BlogPostTemplate = ({
       <BodyWrap>
         <BlogBody>
           <div>
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
+            <GoBack to="/blog">All articles ></GoBack>
+            <PostTitle>{title}</PostTitle>
             <p>{description}</p>
             <PostContent content={content} />
           </div>
@@ -160,24 +169,22 @@ const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
-    </Layout>
+    <BlogPostTemplate
+      content={post.html}
+      contentComponent={HTMLContent}
+      description={post.frontmatter.description}
+      helmet={
+        <Helmet titleTemplate="%s | Blog">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta
+            name="description"
+            content={`${post.frontmatter.description}`}
+          />
+        </Helmet>
+      }
+      tags={post.frontmatter.tags}
+      title={post.frontmatter.title}
+    />
   )
 }
 

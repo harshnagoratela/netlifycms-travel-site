@@ -1,19 +1,23 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const BlogContentBody = styled.div`
+  p {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+    line-height: 25px;
+  }
+`
 
 export const HTMLContent = ({ content, className }) => (
-  <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
+  <BlogContentBody
+    className={className}
+    dangerouslySetInnerHTML={{ __html: content }}
+  />
 )
 
 const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+  <BlogContentBody className={className}>{content}</BlogContentBody>
 )
-
-Content.propTypes = {
-  content: PropTypes.node,
-  className: PropTypes.string,
-}
-
-HTMLContent.propTypes = Content.propTypes
 
 export default Content
