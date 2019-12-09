@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { BodyWrap } from "../../helpers/common"
-import logo from "../../img/logo.svg"
+import logo from "../../img/logo.png"
 import { smallerScreen } from "../../helpers/breakpoints"
 import BurgerMenu from "../BurgerMenu"
 import { Link } from "gatsby"
