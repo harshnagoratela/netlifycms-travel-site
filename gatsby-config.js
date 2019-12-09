@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Travelr`,
-    description: `Explore, Eat, and Party with new friends in Japan`,
-    author: `Red Ram`,
+    title: 'Travelr',
+    description: 'Explore, Eat, and Party with new friends in Japan',
+    author: 'Red Ram',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,13 +33,13 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Noto+Sans+JP\:300,400,500,70` // you can also specify font weights and styles
+          `Noto+Sans+JP\:300,400,500,70`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: 'swap',
+      },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
           include: /assets/, // See below to configure properly
