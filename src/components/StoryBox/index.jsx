@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { smallerScreen } from '../../helpers/breakpoints'
+import { BodyWrap } from '../../helpers/common'
 
 const StoryWrapper = styled.div`
   display: grid;
@@ -43,6 +44,22 @@ const PersonPhoto = styled.img`
   margin-bottom: 10px;
 `
 
+const IFrameWrapper = styled.div`
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  width: 100%;
+
+  iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+`
+
 const StoryBox = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -57,27 +74,39 @@ const StoryBox = () => {
   `)
 
   return (
-    <StoryWrapper>
-      <PersonWrap>
+    <React.Fragment>
+      <StoryWrapper>
+        <PersonWrap>
+          <div>
+            <PersonPhoto src={data.founder.childImageSharp.fluid.src} />
+          </div>
+          <div>
+            <strong>Ema</strong>, Travelr founder
+          </div>
+        </PersonWrap>
         <div>
-          <PersonPhoto src={data.founder.childImageSharp.fluid.src} />
+          <Heading>
+            “We want you to see Japan from different point of view”
+          </Heading>
+          <StoryBody>
+            Life’s better with people—and now there’s a new way to meet them
+            with local events and new app that made them possible. Every
+            experience is selected and created by local people, so you can
+            connect with othes easier than before.
+          </StoryBody>
         </div>
-        <div>
-          <strong>Ema</strong>, Travelr founder
-        </div>
-      </PersonWrap>
-      <div>
-        <Heading>
-          “We want you to see Japan from different point of view”
-        </Heading>
-        <StoryBody>
-          Life’s better with people—and now there’s a new way to meet them with
-          local events and new app that made them possible. Every experience is
-          selected and created by local people, so you can connect with othes
-          easier than before.
-        </StoryBody>
-      </div>
-    </StoryWrapper>
+      </StoryWrapper>
+      <BodyWrap>
+        <IFrameWrapper>
+          <iframe
+            src="https://player.vimeo.com/video/347237870"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen
+          ></iframe>
+        </IFrameWrapper>
+      </BodyWrap>
+    </React.Fragment>
   )
 }
 

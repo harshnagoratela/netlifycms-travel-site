@@ -8,6 +8,7 @@ const FooterWrap = styled.div`
   height: 60px;
   border-top: 1px solid #dedede;
   width: 100%;
+  margin-top: 100px;
 `
 const Flex = styled.div`
   display: flex;
