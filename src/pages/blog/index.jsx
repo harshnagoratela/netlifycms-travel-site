@@ -10,7 +10,7 @@ import { smallerScreen } from '../../helpers/breakpoints'
 import SingleArticle from '../../components/SingleArticle'
 import BlogRoll from '../../components/BlogRoll'
 
-const BlogBackground = styled.div`
+export const BlogBackground = styled.div`
   height: 280px;
   width: 100%;
   background-position: right top;

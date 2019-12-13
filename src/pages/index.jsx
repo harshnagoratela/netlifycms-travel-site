@@ -10,7 +10,6 @@ import GridImages from '../components/GridImages'
 import UpcomingEvents from '../components/UpcomingEvents'
 import StoryBox from '../components/StoryBox'
 import CtaBanner from '../components/CtaBanner'
-import Footer from '../components/Footer'
 import { smallerScreen } from '../helpers/breakpoints'
 
 const IntroBackground = styled.div`
