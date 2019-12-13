@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 const StyledBurger = styled.button`
@@ -45,6 +45,13 @@ const StyledBurger = styled.button`
 `
 
 const BurgerMenu = ({ open, setOpen }) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+  }, [open])
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div />
