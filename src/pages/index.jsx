@@ -53,6 +53,10 @@ const TextIntroductionTitle = styled.h2`
   font-size: 30px;
   color: rgba(0, 0, 0, 0.96);
   margin-right: 40px;
+  ${smallerScreen} {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
 `
 
 const TextIntroductionText = styled.p`
