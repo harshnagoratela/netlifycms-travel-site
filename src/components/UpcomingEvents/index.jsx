@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
 import { useStaticQuery, graphql } from 'gatsby'
 import { smallerScreen } from '../../helpers/breakpoints'
+import { useMediaQuery } from 'react-responsive'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
 
 const UpcomingWrap = styled.div`
   background: rgba(9, 5, 76, 0.03);
@@ -24,7 +27,7 @@ const Event = styled.div``
 
 const EventButton = styled.div`
   background-image: linear-gradient(180deg, #662fa8 1%, #5b2da9 100%);
-  border-radius: 3px;
+  border-radius: 30px;
   color: #fff;
   font-weight: 500;
   font-size: 14px;
@@ -37,6 +40,10 @@ const EventButton = styled.div`
 
   &:hover {
     background-image: linear-gradient(180deg, #5b2da9 1%, #662fa8 100%);
+  }
+
+  ${smallerScreen} {
+    margin-bottom: 10px;
   }
 `
 
@@ -58,12 +65,20 @@ const EventHeader = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  ${smallerScreen} {
+    width: 90%;
+    margin: 0 auto;
+  }
 `
 
 const EventDescription = styled.p`
   font-size: 13px;
   color: rgba(18, 18, 18, 0.75);
   line-height: 20px;
+  ${smallerScreen} {
+    width: 90%;
+  }
 `
 
 const Title = styled.h3`
@@ -80,7 +95,15 @@ const Subtitle = styled.div`
   margin-bottom: 60px;
 `
 
+const MobileCarousel = styled(Carousel)`
+  .carousel .slide {
+    background: transparent;
+  }
+`
+
 const UpcomingEvents = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
+
   const data = useStaticQuery(graphql`
     query {
       karaoke: file(relativePath: { eq: "asakusa.jpg" }) {
@@ -92,6 +115,58 @@ const UpcomingEvents = () => {
       }
     }
   `)
+
+  if (isMobile) {
+    return (
+      <UpcomingWrap>
+        <Title>Upcoming events</Title>
+        <Subtitle>
+          You don’t need to pay for a guide to have fun in Japan. Meet great
+          friends on TRAVELR and hang out now.
+        </Subtitle>
+        <MobileCarousel
+          showThumbs={false}
+          centerMode
+          infiniteLoop
+          showIndicators={false}
+          selectedItem={2}
+          showArrows={false}
+          showStatus={false}
+        >
+          <Event>
+            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
+              <EventTitle>Takoyaki party</EventTitle>
+            </EventHeader>
+            <EventDescription>
+              Learn how to make Takoyaki and eat them with fellow travelers. We
+              have three grills and lot of octopus ready!
+            </EventDescription>{' '}
+            <EventButton>Reserve a spot</EventButton>
+          </Event>
+          <Event>
+            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
+              <EventTitle>Takoyaki party</EventTitle>
+            </EventHeader>
+            <EventDescription>
+              Learn how to make Takoyaki and eat them with fellow travelers. We
+              have three grills and lot of octopus ready!
+            </EventDescription>{' '}
+            <EventButton>Reserve a spot</EventButton>
+          </Event>
+          <Event>
+            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
+              <EventTitle>Takoyaki party</EventTitle>
+            </EventHeader>
+            <EventDescription>
+              Learn how to make Takoyaki and eat them with fellow travelers. We
+              have three grills and lot of octopus ready!
+            </EventDescription>{' '}
+            <EventButton>Reserve a spot</EventButton>
+          </Event>
+        </MobileCarousel>
+      </UpcomingWrap>
+    )
+  }
 
   return (
     <UpcomingWrap>

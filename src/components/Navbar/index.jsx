@@ -83,7 +83,7 @@ export const MobileNavigationProps = styled.nav`
     }
 
     &:hover {
-      color: ${({ theme }) => theme.colors.primary};
+      color: #fff;
     }
   }
 

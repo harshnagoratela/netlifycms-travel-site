@@ -73,7 +73,7 @@ const GridImages = () => {
           <BigImage src={data.grid1.childImageSharp.fluid.src} />
         </div>
         <Flex>
-          <SmallImage src={data.grid2.childImageSharp.fluid.src} />
+          <SmallImage src={data.grid2.childImageSharp.fluid.src} hideOnMobile />
           <SmallImage
             src={data.grid3.childImageSharp.fluid.src}
             style={{ marginTop: '30px' }}

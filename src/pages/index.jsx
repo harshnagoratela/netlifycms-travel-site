@@ -10,7 +10,6 @@ import GridImages from '../components/GridImages'
 import UpcomingEvents from '../components/UpcomingEvents'
 import StoryBox from '../components/StoryBox'
 import CtaBanner from '../components/CtaBanner'
-import Footer from '../components/Footer'
 import { smallerScreen } from '../helpers/breakpoints'
 
 const IntroBackground = styled.div`
@@ -53,6 +52,10 @@ const TextIntroductionTitle = styled.h2`
   font-size: 30px;
   color: rgba(0, 0, 0, 0.96);
   margin-right: 40px;
+  ${smallerScreen} {
+    font-size: 26px;
+    margin-bottom: 0;
+  }
 `
 
 const TextIntroductionText = styled.p`
