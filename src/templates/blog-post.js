@@ -6,19 +6,11 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
-import { BodyWrap } from '../helpers/common'
+import { BodyWrap, HeaderBackground } from '../helpers/common'
 import Navbar from '../components/Navbar'
 import { smallerScreen } from '../helpers/breakpoints'
-
-const BlogBackground = styled.div`
-  height: 280px;
-  width: 100%;
-  background-position: right top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(174deg, #a23ca0 0%, #4f2aab 100%);
-  text-align: center;
-`
+import { useMediaQuery } from 'react-responsive'
+import DesktopBanner from '../components/DesktopBanner'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -48,6 +40,7 @@ const BlogBody = styled.div`
 
 const Topics = styled.div`
   margin-top: 40px;
+  margin-bottom: 40px;
 
   h3 {
     font-size: 20px;
@@ -101,10 +94,11 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content
+  const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
   return (
     <Layout>
-      <BlogBackground>
+      <HeaderBackground>
         <Navbar />
         <BodyWrap>
           <MainTitle>Japan travel tips</MainTitle>
@@ -112,7 +106,7 @@ export const BlogPostTemplate = ({
             Food, places, people… We are writing about everything
           </Subtitle>
         </BodyWrap>
-      </BlogBackground>
+      </HeaderBackground>
       <BodyWrap>
         <BlogBody>
           <div>
@@ -129,6 +123,7 @@ export const BlogPostTemplate = ({
                 <SingleTopic>Trekking</SingleTopic>
               </TopicWrap>
             </Topics>
+            <div>{!isMobile && <DesktopBanner />}</div>
           </div>
         </BlogBody>
       </BodyWrap>

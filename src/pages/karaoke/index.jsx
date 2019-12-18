@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import SEO from '../../components/seo'
 
-import { BodyWrap } from '../../helpers/common'
+import { BodyWrap, HeaderBackground } from '../../helpers/common'
 import { smallerScreen } from '../../helpers/breakpoints'
 import Navbar from '../../components/Navbar'
-import { BlogBackground } from '../blog'
 import CtaBanner from '../../components/CtaBanner'
 import { useStaticQuery } from 'gatsby'
 import KaraokeCalculator from '../../components/KaraokeCalculator'
@@ -105,7 +104,7 @@ const KaraokePage = () => {
 
   return (
     <Layout>
-      <BlogBackground>
+      <HeaderBackground>
         <Navbar />
         <BodyWrap>
           <MainTitle>Karaoke</MainTitle>
@@ -113,7 +112,7 @@ const KaraokePage = () => {
             Get discounts for Japan most beloved social activity
           </Subtitle>
         </BodyWrap>
-      </BlogBackground>
+      </HeaderBackground>
 
       <BodyWrap>
         <Grid>

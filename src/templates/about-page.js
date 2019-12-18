@@ -3,32 +3,52 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import Navbar from '../components/Navbar'
+import { BodyWrap, HeaderBackground } from '../helpers/common'
+import styled from 'styled-components'
+import { smallerScreen } from '../helpers/breakpoints'
+
+const MainTitle = styled.h1`
+  margin-top: 60px;
+  color: #fff;
+  padding: 0 20px;
+  ${smallerScreen} {
+    font-size: 1.7rem;
+  }
+`
+
+const Subtitle = styled.p`
+  color: #fff;
+  padding: 0 20px;
+`
+
+const PageBody = styled.div`
+  margin-top: 50px;
+`
+
+const PostTitle = styled.h1`
+  margin-top: 10px;
+`
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <React.Fragment>
+      <HeaderBackground>
+        <Navbar />
+        <BodyWrap>
+          <MainTitle>{title}</MainTitle>
+        </BodyWrap>
+      </HeaderBackground>
+      <BodyWrap>
+        <PageBody>
+          <PostTitle>{title}</PostTitle>
+          <PageContent className="content" content={content} />
+        </PageBody>
+      </BodyWrap>
+    </React.Fragment>
   )
-}
-
-AboutPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
 }
 
 const AboutPage = ({ data }) => {
