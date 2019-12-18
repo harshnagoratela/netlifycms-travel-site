@@ -96,13 +96,14 @@ export const MobileNavigationProps = styled.nav`
 
 const MENU_ITEMS = [
   { name: 'Home', link: '/' },
-  { name: 'Contact', link: '/contact' },
+  { name: 'About', link: '/about' },
   { name: 'Karaoke', link: '/karaoke' },
   { name: 'Blog', link: '/blog' },
 ]
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
+
 
   return (
     <React.Fragment>
@@ -113,7 +114,11 @@ const Navbar = () => {
           </Link>
           <MenuWrapper>
             {MENU_ITEMS.map(item => (
-              <NavbarLink to={item.link}>{item.name}</NavbarLink>
+              <NavbarLink
+                to={item.link}
+              >
+                {item.name}
+              </NavbarLink>
             ))}
           </MenuWrapper>
 

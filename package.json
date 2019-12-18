@@ -36,6 +36,7 @@
     "react-icons": "^3.8.0",
     "react-responsive": "^8.0.1",
     "react-responsive-carousel": "^3.1.51",
+    "react-stickynode": "^2.1.1",
     "styled-components": "^4.4.1",
     "uuid": "^3.2.1"
   },
