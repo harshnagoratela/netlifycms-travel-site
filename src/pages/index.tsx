@@ -68,6 +68,17 @@ const TextIntroductionText = styled.p`
   line-height: 29px;
 `
 
+const DownloadButton = styled.div`
+  display: inline-block;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  background: #dedede;
+  margin: 10px 0 0 20px;
+`
+
 const IndexPage = ({ intl }) => {
   const { toggleDownloadModal } = useContext(WebContext)
   return (
@@ -79,7 +90,9 @@ const IndexPage = ({ intl }) => {
           <Subtitle fontSize={1}>
             Explore, Eat, and Party with new friends on TRAVELR app.
           </Subtitle>
-          <div onClick={() => toggleDownloadModal()}>Get app!</div>
+          <DownloadButton onClick={() => toggleDownloadModal()}>
+            Get app!
+          </DownloadButton>
         </BodyWrap>
       </IntroBackground>
 

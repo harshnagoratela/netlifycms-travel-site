@@ -1,8 +1,10 @@
 import React from 'react'
+
 const defaultState = {
   showDownloadModal: false,
   toggleDownloadModal: () => {},
 }
+
 const WebContext = React.createContext(defaultState)
 
 class WebProvider extends React.Component {
