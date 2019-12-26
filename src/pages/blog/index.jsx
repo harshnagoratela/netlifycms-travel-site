@@ -4,21 +4,11 @@ import styled from 'styled-components'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 import Navbar from '../../components/Navbar'
-import { BodyWrap } from '../../helpers/common'
-import Footer from '../../components/Footer'
+import { BodyWrap, HeaderBackground } from '../../helpers/common'
 import { smallerScreen } from '../../helpers/breakpoints'
-import SingleArticle from '../../components/SingleArticle'
 import BlogRoll from '../../components/BlogRoll'
-
-export const BlogBackground = styled.div`
-  height: 280px;
-  width: 100%;
-  background-position: right top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(174deg, #a23ca0 0%, #4f2aab 100%);
-  text-align: center;
-`
+import DesktopBanner from '../../components/DesktopBanner'
+import { useMediaQuery } from 'react-responsive'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -82,34 +72,38 @@ const SingleTopic = styled.div`
   }
 `
 
-const Blog = () => (
-  <Layout>
-    <BlogBackground>
-      <Navbar />
-      <BodyWrap>
-        <MainTitle>Japan travel tips</MainTitle>
-        <Subtitle>
-          Food, places, people… We are writing about everything
-        </Subtitle>
-      </BodyWrap>
-    </BlogBackground>
+const Blog = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
-    <BodyWrap>
-      <Topics>
-        <h3>Topics</h3>
-        <TopicWrap>
-          <SingleTopic>Solo travels</SingleTopic>
-          <SingleTopic>Trekking</SingleTopic>
-        </TopicWrap>
-      </Topics>
-      <BlogBody>
-        <div>
-          <BlogRoll />
-        </div>
-        <div>Banner</div>
-      </BlogBody>
-    </BodyWrap>
-  </Layout>
-)
+  return (
+    <Layout>
+      <HeaderBackground>
+        <Navbar />
+        <BodyWrap>
+          <MainTitle>Japan travel tips</MainTitle>
+          <Subtitle>
+            Food, places, people… We are writing about everything
+          </Subtitle>
+        </BodyWrap>
+      </HeaderBackground>
+
+      <BodyWrap>
+        <Topics>
+          <h3>Topics</h3>
+          <TopicWrap>
+            <SingleTopic>Solo travels</SingleTopic>
+            <SingleTopic>Trekking</SingleTopic>
+          </TopicWrap>
+        </Topics>
+        <BlogBody>
+          <div>
+            <BlogRoll />
+          </div>
+          <div>{!isMobile && <DesktopBanner />}</div>
+        </BlogBody>
+      </BodyWrap>
+    </Layout>
+  )
+}
 
 export default Blog
