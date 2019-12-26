@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import { injectIntl } from "gatsby-plugin-intl"
 import styled from 'styled-components'
 
@@ -12,6 +12,7 @@ import StoryBox from '../components/StoryBox'
 import CtaBanner from '../components/CtaBanner'
 import { smallerScreen } from '../helpers/breakpoints'
 import { color, fontSize } from 'styled-system'
+import WebContext from '../helpers/WebContext'
 
 const IntroBackground = styled.div`
   height: 500px;
@@ -67,37 +68,41 @@ const TextIntroductionText = styled.p`
   line-height: 29px;
 `
 
-const IndexPage = ({ intl }) => (
-  <Layout>
-    <IntroBackground>
-      <Navbar />
+const IndexPage = ({ intl }) => {
+  const { toggleDownloadModal } = useContext(WebContext)
+  return (
+    <Layout>
+      <IntroBackground>
+        <Navbar />
+        <BodyWrap>
+          <MainTitle fontSize={5}>Have a trip to Japan ahead?</MainTitle>
+          <Subtitle fontSize={1}>
+            Explore, Eat, and Party with new friends on TRAVELR app.
+          </Subtitle>
+          <div onClick={() => toggleDownloadModal()}>Get app!</div>
+        </BodyWrap>
+      </IntroBackground>
+
       <BodyWrap>
-        <MainTitle fontSize={5}>Have a trip to Japan ahead?</MainTitle>
-        <Subtitle fontSize={1}>
-          Explore, Eat, and Party with new friends on TRAVELR app.
-        </Subtitle>
+        <TextIntroduction>
+          <TextIntroductionTitle fontSize={5} color="textBlack">
+            Share and experience Japan together
+          </TextIntroductionTitle>
+          <TextIntroductionText color="textGrey" fontSize={2}>
+            Life’s better with people—and now there’s a new way to meet them
+            with local events and new app that made them possible. Every
+            experience is selected and created by local people, so you can
+            connect with othes easier than before.
+          </TextIntroductionText>
+        </TextIntroduction>
       </BodyWrap>
-    </IntroBackground>
 
-    <BodyWrap>
-      <TextIntroduction>
-        <TextIntroductionTitle fontSize={5} color="textBlack">
-          Share and experience Japan together
-        </TextIntroductionTitle>
-        <TextIntroductionText color="textGrey" fontSize={2}>
-          Life’s better with people—and now there’s a new way to meet them with
-          local events and new app that made them possible. Every experience is
-          selected and created by local people, so you can connect with othes
-          easier than before.
-        </TextIntroductionText>
-      </TextIntroduction>
-    </BodyWrap>
-
-    <GridImages />
-    <UpcomingEvents />
-    <StoryBox />
-    <CtaBanner />
-  </Layout>
-)
+      <GridImages />
+      <UpcomingEvents />
+      <StoryBox />
+      <CtaBanner />
+    </Layout>
+  )
+}
 
 export default IndexPage

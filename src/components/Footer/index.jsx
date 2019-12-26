@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { smallerScreen } from '../../helpers/breakpoints'
+import ThemeContext from '../../helpers/WebContext'
+import DownloadModal from '../DownloadModal'
+import WebContext from '../../helpers/WebContext'
 
 const FooterWrap = styled.div`
   height: 60px;
@@ -30,8 +33,11 @@ const Social = styled.div`
 `
 
 const Footer = () => {
+  const { showDownloadModal } = React.useContext(WebContext)
+
   return (
     <FooterWrap>
+      {showDownloadModal && <DownloadModal />}
       <BodyWrap>
         <Flex>
           © 2019 Travelr | All Rights Reserved
