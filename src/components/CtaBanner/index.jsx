@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { useStaticQuery, graphql } from "gatsby"
 import { smallerScreen } from '../../helpers/breakpoints';
+import { RoundedButton } from '../common';
 
 const Wrapper = styled.div`
   background-image: linear-gradient(174deg,rgba(162, 60, 160, 0.1) 0%,rgba(79, 42, 171, 0.1) 100%);
@@ -33,6 +34,10 @@ const Subtitle = styled.div`
   color: rgba(0,0,0,0.80);
   line-height: 29px;
 `
+
+const CtaButton = styled(RoundedButton)`
+  margin: 20px 0 0 0;
+`;
 
 const PassportImage = styled.div`
   background-image: url(${({ background }) => background});
@@ -67,6 +72,7 @@ const CtaBanner = () => {
       <Content>
         <Title>Ready to explore Japan</Title>
         <Subtitle>Download Travelr app, browse all upcoming events and network with other travelers.</Subtitle>
+        <CtaButton>Get the app now</CtaButton>
       </Content>
       <PassportImage background={data.passport.childImageSharp.fluid.src} />
     </Wrapper>

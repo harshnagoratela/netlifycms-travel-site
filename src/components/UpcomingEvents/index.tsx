@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
 import { useStaticQuery, graphql } from 'gatsby'
 import { smallerScreen } from '../../helpers/breakpoints'
-import { useMediaQuery } from 'react-responsive'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel } from 'react-responsive-carousel'
+// @ts-ignore
+import { useMediaQuery } from 'react-responsive'
+import { Text, RoundedButton } from '../common'
 
 const UpcomingWrap = styled.div`
   background: rgba(9, 5, 76, 0.03);
@@ -25,28 +27,6 @@ const Grid = styled.div`
 
 const Event = styled.div``
 
-const EventButton = styled.div`
-  background-image: linear-gradient(180deg, #662fa8 1%, #5b2da9 100%);
-  border-radius: 30px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 14px;
-  text-align: center;
-  padding: 16px 0;
-  max-width: 220px;
-  margin: 0 auto;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    background-image: linear-gradient(180deg, #5b2da9 1%, #662fa8 100%);
-  }
-
-  ${smallerScreen} {
-    margin-bottom: 10px;
-  }
-`
-
 const EventTitle = styled.div`
   position: absolute;
   bottom: 25px;
@@ -56,11 +36,11 @@ const EventTitle = styled.div`
   text-shadow: 0 1px 1px #000000;
 `
 
-const EventHeader = styled.div`
+const EventHeader = styled.div<{ background: string }>`
   display: block;
   height: 230px;
   width: 100%;
-  background-image: url(${({ background }) => background});
+  background-image: url(${({ background }: any) => background});
   box-shadow: inset 0px -55px 60px -4px rgba(0, 0, 0, 1);
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,8 +53,9 @@ const EventHeader = styled.div`
 `
 
 const EventDescription = styled.p`
-  font-size: 13px;
-  color: rgba(18, 18, 18, 0.75);
+  font-size: ${({ theme }) => `${theme.fontSizes[1]}px`};
+  color: ${({ theme }) => theme.colors.textGrey};
+  margin-bottom: 20px;
   line-height: 20px;
   ${smallerScreen} {
     width: 90%;
@@ -86,13 +67,6 @@ const Title = styled.h3`
   font-size: 30px;
   color: rgba(0, 0, 0, 0.96);
   margin-bottom: 10px;
-`
-
-const Subtitle = styled.div`
-  text-align: center;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.66);
-  margin-bottom: 60px;
 `
 
 const MobileCarousel = styled(Carousel)`
@@ -120,10 +94,10 @@ const UpcomingEvents = () => {
     return (
       <UpcomingWrap>
         <Title>Upcoming events</Title>
-        <Subtitle>
+        <Text color="textGrey" fontSize={1} mb="60px" textAlign="center">
           You don’t need to pay for a guide to have fun in Japan. Meet great
           friends on TRAVELR and hang out now.
-        </Subtitle>
+        </Text>
         <MobileCarousel
           showThumbs={false}
           centerMode
@@ -141,7 +115,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -151,7 +125,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -161,7 +135,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
         </MobileCarousel>
       </UpcomingWrap>
@@ -172,10 +146,10 @@ const UpcomingEvents = () => {
     <UpcomingWrap>
       <BodyWrap>
         <Title>Upcoming events</Title>
-        <Subtitle>
+        <Text color="textGrey" fontSize={1} mb={60} textAlign="center">
           You don’t need to pay for a guide to have fun in Japan. Meet great
           friends on TRAVELR and hang out now.
-        </Subtitle>
+        </Text>
         <Grid>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -185,7 +159,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -195,7 +169,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -205,7 +179,7 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <EventButton>Reserve a spot</EventButton>
+            <RoundedButton>Reserve a spot</RoundedButton>
           </Event>
         </Grid>
       </BodyWrap>

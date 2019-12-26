@@ -11,6 +11,7 @@ import UpcomingEvents from '../components/UpcomingEvents'
 import StoryBox from '../components/StoryBox'
 import CtaBanner from '../components/CtaBanner'
 import { smallerScreen } from '../helpers/breakpoints'
+import { color, fontSize } from 'styled-system'
 
 const IntroBackground = styled.div`
   height: 500px;
@@ -29,6 +30,7 @@ const MainTitle = styled.h1`
   margin-top: 140px;
   color: #fff;
   padding: 0 20px;
+  ${fontSize}
   ${smallerScreen} {
     font-size: 1.7rem;
   }
@@ -37,6 +39,7 @@ const MainTitle = styled.h1`
 const Subtitle = styled.p`
   color: #fff;
   padding: 0 20px;
+  ${fontSize}
 `
 const TextIntroduction = styled.div`
   display: grid;
@@ -49,8 +52,8 @@ const TextIntroduction = styled.div`
 `
 
 const TextIntroductionTitle = styled.h2`
-  font-size: 30px;
-  color: rgba(0, 0, 0, 0.96);
+  ${fontSize}
+  ${color}
   margin-right: 40px;
   ${smallerScreen} {
     font-size: 26px;
@@ -59,8 +62,8 @@ const TextIntroductionTitle = styled.h2`
 `
 
 const TextIntroductionText = styled.p`
-  font-size: 17px;
-  color: rgba(0, 0, 0, 0.66);
+  ${fontSize}
+  ${color}
   line-height: 29px;
 `
 
@@ -69,8 +72,8 @@ const IndexPage = ({ intl }) => (
     <IntroBackground>
       <Navbar />
       <BodyWrap>
-        <MainTitle>Have a trip to Japan ahead?</MainTitle>
-        <Subtitle>
+        <MainTitle fontSize={5}>Have a trip to Japan ahead?</MainTitle>
+        <Subtitle fontSize={1}>
           Explore, Eat, and Party with new friends on TRAVELR app.
         </Subtitle>
       </BodyWrap>
@@ -78,10 +81,10 @@ const IndexPage = ({ intl }) => (
 
     <BodyWrap>
       <TextIntroduction>
-        <TextIntroductionTitle>
+        <TextIntroductionTitle fontSize={5} color="textBlack">
           Share and experience Japan together
         </TextIntroductionTitle>
-        <TextIntroductionText>
+        <TextIntroductionText color="textGrey" fontSize={2}>
           Life’s better with people—and now there’s a new way to meet them with
           local events and new app that made them possible. Every experience is
           selected and created by local people, so you can connect with othes
