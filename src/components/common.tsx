@@ -1,4 +1,4 @@
-import { fontSize, color, margin, textAlign, lineHeight } from 'styled-system'
+import { fontSize, color, margin, textAlign, lineHeight, fontWeight } from 'styled-system'
 import styled from 'styled-components'
 import { smallerScreen } from '../helpers/breakpoints'
 
@@ -8,6 +8,7 @@ export const Text = styled.div`
   ${margin}
   ${textAlign}
   ${lineHeight}
+  ${fontWeight}
 `
 
 export const RoundedButton = styled.div`

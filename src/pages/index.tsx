@@ -10,7 +10,7 @@ import GridImages from '../components/GridImages'
 import UpcomingEvents from '../components/UpcomingEvents'
 import StoryBox from '../components/StoryBox'
 import CtaBanner from '../components/CtaBanner'
-import { smallerScreen } from '../helpers/breakpoints'
+import { smallerScreen, mediumScreen } from '../helpers/breakpoints'
 import { color, fontSize } from 'styled-system'
 import WebContext from '../helpers/WebContext'
 
@@ -22,13 +22,18 @@ const IntroBackground = styled.div`
   background-repeat: no-repeat;
   border-radius: 0 0 0 600px;
   background-image: linear-gradient(174deg, #a23ca0 0%, #4f2aab 100%);
+
+  @media all and (max-width: 1400px) {
+    border-radius: 0 0 0 200px;
+  }
+
   ${smallerScreen} {
     border-radius: 0 0 0 100px;
   }
 `
 
 const MainTitle = styled.h1`
-  margin-top: 140px;
+  margin-top: 100px;
   color: #fff;
   padding: 0 20px;
   ${fontSize}
@@ -70,13 +75,21 @@ const TextIntroductionText = styled.p`
 
 const DownloadButton = styled.div`
   display: inline-block;
-  padding: 10px 16px;
+  padding: 13px 30px;
   cursor: pointer;
+  border-radius: 3px;
   font-weight: 500;
   font-size: 14px;
   text-align: center;
-  background: #dedede;
+  background: #400b46;
+  color: #fff;
   margin: 10px 0 0 20px;
+  box-shadow: 0 0px 5px 4px rgba(42, 16, 70, 0.1411764705882353);
+  transition: background 0.3s;
+
+  &:hover {
+    background: #1a051d;
+  }
 `
 
 const IndexPage = ({ intl }) => {
@@ -86,7 +99,9 @@ const IndexPage = ({ intl }) => {
       <IntroBackground>
         <Navbar />
         <BodyWrap>
-          <MainTitle fontSize={5}>Have a trip to Japan ahead?</MainTitle>
+          <MainTitle fontSize={5}>
+            Share and experience Japan together
+          </MainTitle>
           <Subtitle fontSize={1}>
             Explore, Eat, and Party with new friends on TRAVELR app.
           </Subtitle>
@@ -99,7 +114,7 @@ const IndexPage = ({ intl }) => {
       <BodyWrap>
         <TextIntroduction>
           <TextIntroductionTitle fontSize={5} color="textBlack">
-            Share and experience Japan together
+            Have a trip to Japan ahead?
           </TextIntroductionTitle>
           <TextIntroductionText color="textGrey" fontSize={2}>
             Life’s better with people—and now there’s a new way to meet them

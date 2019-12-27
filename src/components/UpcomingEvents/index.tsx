@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -8,6 +8,7 @@ import { Carousel } from 'react-responsive-carousel'
 // @ts-ignore
 import { useMediaQuery } from 'react-responsive'
 import { Text, RoundedButton } from '../common'
+import WebContext from '../../helpers/WebContext'
 
 const UpcomingWrap = styled.div`
   background: rgba(9, 5, 76, 0.03);
@@ -77,6 +78,7 @@ const MobileCarousel = styled(Carousel)`
 
 const UpcomingEvents = () => {
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
+  const { toggleDownloadModal } = useContext(WebContext)
 
   const data = useStaticQuery(graphql`
     query {
@@ -115,7 +117,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -125,7 +129,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -135,7 +141,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
         </MobileCarousel>
       </UpcomingWrap>
@@ -159,7 +167,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -169,7 +179,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
@@ -179,7 +191,9 @@ const UpcomingEvents = () => {
               Learn how to make Takoyaki and eat them with fellow travelers. We
               have three grills and lot of octopus ready!
             </EventDescription>{' '}
-            <RoundedButton>Reserve a spot</RoundedButton>
+            <RoundedButton onClick={() => toggleDownloadModal()}>
+              Reserve a spot
+            </RoundedButton>
           </Event>
         </Grid>
       </BodyWrap>

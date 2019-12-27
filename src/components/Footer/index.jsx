@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <FooterWrap>
-      {showDownloadModal && <DownloadModal />}
+      <DownloadModal />
       <BodyWrap>
         <Flex>
           © 2019 Travelr | All Rights Reserved
