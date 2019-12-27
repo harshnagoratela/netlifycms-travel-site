@@ -37,12 +37,12 @@ const Grid = styled.div`
   margin-top: 50px;
 `
 
-const GooglePlayIcon = styled.img`
+export const GooglePlayIcon = styled.img`
   max-height: 50px;
   width: 100%;
 `
 
-const AppStoreIcon = styled.img`
+export const AppStoreIcon = styled.img`
   width: 100%;
   max-height: 50px;
   margin-bottom: 10px;

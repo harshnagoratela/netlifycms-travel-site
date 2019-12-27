@@ -50,6 +50,7 @@ export const ShowOnMobile = styled.div`
 
 export const MobileNavigationProps = styled.nav`
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+  transition: transform 0.3s ease-in-out;
   z-index: 8;
   display: none;
   flex-direction: column;
@@ -60,7 +61,6 @@ export const MobileNavigationProps = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  transition: transform 0.3s ease-in-out;
 
   ${smallerScreen} {
     width: 100%;

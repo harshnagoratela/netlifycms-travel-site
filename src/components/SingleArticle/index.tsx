@@ -1,17 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { Text, RoundedButton } from '../common'
 
 const ArticleWrap = styled.div`
   margin-bottom: 80px;
 `
 
 const Title = styled.h3`
+  margin-top: 0;
+  font-size: ${({ theme }) => `${theme.fontSizes[2]}px`};
   a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.8);
   }
 `
+
+const ReadButton = styled(RoundedButton)`
+  margin: 20px 0 0 0;
+`;
 
 const Image = styled.div`
   background-image: url(${({ src }) => src});
@@ -20,12 +27,6 @@ const Image = styled.div`
   background-position: center center;
   height: 220px;
   width: 100%;
-`
-
-const Description = styled.p`
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.66);
-  line-height: 24px;
 `
 
 const ReadMore = styled(Link)`
@@ -52,8 +53,12 @@ const SingleArticle = ({ post }) => {
           }
         />
       </Link>
-      <Description>{post.excerpt}</Description>
-      <ReadMore to={post.fields.slug}>Read full story</ReadMore>
+      <Text fontSizes={1} color="textPrimary" lineHeight="27px" mt={15}>
+        {post.excerpt}
+      </Text>
+      <ReadMore to={post.fields.slug}>
+        <ReadButton>Read full story</ReadButton>
+      </ReadMore>
     </ArticleWrap>
   )
 }

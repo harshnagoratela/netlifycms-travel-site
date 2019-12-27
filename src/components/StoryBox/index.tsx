@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import { smallerScreen } from '../../helpers/breakpoints'
 import { BodyWrap } from '../../helpers/common'
+import { Text } from '../common'
 
 const StoryWrapper = styled.div`
   display: grid;
@@ -20,12 +21,6 @@ const StoryWrapper = styled.div`
 const Heading = styled.h3`
   font-size: 20px;
   color: rgba(0, 0, 0, 0.96);
-`
-
-const StoryBody = styled.p`
-  font-size: 17px;
-  color: rgba(0, 0, 0, 0.66);
-  line-height: 29px;
 `
 
 const PersonWrap = styled.div`
@@ -88,12 +83,13 @@ const StoryBox = () => {
           <Heading>
             “We want you to see Japan from different point of view”
           </Heading>
-          <StoryBody>
+
+          <Text fonSize={2} color="textGrey" lineHeight="29px">
             Life’s better with people—and now there’s a new way to meet them
             with local events and new app that made them possible. Every
             experience is selected and created by local people, so you can
             connect with othes easier than before.
-          </StoryBody>
+          </Text>
         </div>
       </StoryWrapper>
       <BodyWrap>

@@ -17,6 +17,7 @@
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-plugin-styled-components": "^3.1.14",
+    "gatsby-plugin-typescript": "^2.1.23",
     "gatsby-remark-copy-linked-files": "^2.0.7",
     "gatsby-remark-images": "^3.1.6",
     "gatsby-remark-relative-images": "^0.2.1",
@@ -38,6 +39,7 @@
     "react-responsive-carousel": "^3.1.51",
     "react-stickynode": "^2.1.1",
     "styled-components": "^4.4.1",
+    "styled-system": "^5.1.4",
     "uuid": "^3.2.1"
   },
   "keywords": [
@@ -54,6 +56,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@types/styled-components": "^4.4.1",
+    "@types/styled-system": "^5.1.4",
     "prettier": "^1.19.1"
   }
 }
