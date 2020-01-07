@@ -43,7 +43,6 @@ const SingleArticle = ({ post }) => {
       <Title>
         <Link to={post.fields.slug}>{post.frontmatter.title} </Link>
       </Title>
-
       <Link to={post.fields.slug}>
         <Image
           src={
