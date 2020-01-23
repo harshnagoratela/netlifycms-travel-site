@@ -7,6 +7,7 @@ import Navbar from '../components/Navbar'
 import { BodyWrap, HeaderBackground } from '../helpers/common'
 import styled from 'styled-components'
 import { smallerScreen } from '../helpers/breakpoints'
+import SEO from '../components/seo'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -35,6 +36,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <React.Fragment>
+      <SEO title={`${title} | Travelr app`} />
+
       <HeaderBackground>
         <Navbar />
         <BodyWrap>

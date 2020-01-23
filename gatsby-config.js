@@ -3,6 +3,7 @@ module.exports = {
     title: 'Travelr',
     description: 'Explore, Eat, and Party with new friends in Japan',
     author: 'Red Ram',
+    siteUrl: `https://travelr.me`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

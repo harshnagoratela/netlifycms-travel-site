@@ -104,7 +104,6 @@ const MENU_ITEMS = [
 const Navbar = () => {
   const [open, setOpen] = useState(false)
 
-
   return (
     <React.Fragment>
       <BodyWrap>
@@ -114,11 +113,7 @@ const Navbar = () => {
           </Link>
           <MenuWrapper>
             {MENU_ITEMS.map(item => (
-              <NavbarLink
-                to={item.link}
-              >
-                {item.name}
-              </NavbarLink>
+              <NavbarLink to={item.link}>{item.name}</NavbarLink>
             ))}
           </MenuWrapper>
 
@@ -138,8 +133,6 @@ const Navbar = () => {
             <a>{item.name}</a>
           </Link>
         ))}
-
-        <p>Download our app!</p>
       </MobileNavigationProps>
     </React.Fragment>
   )

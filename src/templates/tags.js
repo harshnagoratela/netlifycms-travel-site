@@ -7,6 +7,7 @@ import Tags from '../components/Tags'
 import { MainTitle, Subtitle, BlogBody } from '../pages/blog'
 import SingleArticle from '../components/SingleArticle'
 import DesktopBanner from '../components/DesktopBanner'
+import SEO from '../components/seo'
 
 class TagRoute extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
+        <SEO title={`${tag} articles | Travelr app`} />
         <HeaderBackground>
           <Navbar />
           <BodyWrap>

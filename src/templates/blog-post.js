@@ -11,6 +11,7 @@ import Navbar from '../components/Navbar'
 import { smallerScreen } from '../helpers/breakpoints'
 import { useMediaQuery } from 'react-responsive'
 import DesktopBanner from '../components/DesktopBanner'
+import SEO from '../components/seo'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -98,6 +99,7 @@ export const BlogPostTemplate = ({
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <HeaderBackground>
         <Navbar />
         <BodyWrap>

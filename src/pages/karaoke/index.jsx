@@ -104,6 +104,8 @@ const KaraokePage = () => {
 
   return (
     <Layout>
+      <SEO title={`Karaoke in Japan | Travelr app`} />
+
       <HeaderBackground>
         <Navbar />
         <BodyWrap>
