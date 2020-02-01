@@ -105,7 +105,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <React.Fragment>
+    <>
       <BodyWrap>
         <NavbarWrapper>
           <Link to="/">
@@ -134,7 +134,7 @@ const Navbar = () => {
           </Link>
         ))}
       </MobileNavigationProps>
-    </React.Fragment>
+    </>
   )
 }
 
