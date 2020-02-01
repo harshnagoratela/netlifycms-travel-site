@@ -4,7 +4,8 @@ import { Text } from '../common'
 import { FaTimes } from 'react-icons/fa'
 import ThemeContext from '../../helpers/WebContext'
 import { smallerScreen } from '../../helpers/breakpoints'
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import ScrollLock, { TouchScrollable } from 'react-scrolllock'
 
 const Cover = styled.div`
   top: 0;
@@ -22,7 +23,7 @@ const ModalBody = styled.div`
   padding: 50px;
   box-sizing: border-box;
   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   z-index: 8;
   width: 60%;
   flex-direction: column;
@@ -55,18 +56,28 @@ const Grid = styled.div`
   margin-top: 20px;
   align-items: center;
   justify-content: center;
+
+  ${smallerScreen}{
+    flex-direction: column;
+    text-align: center;
+  }
 `
 
 const DownloadIcon = styled.img`
-  max-width: 130px;
+  max-width: 140px;
   margin: 0 20px;
+  ${smallerScreen}{
+    margin: 10px auto;
+  }
 `
 
 const Logo = styled.img`
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 100px auto;
   display: block;
   max-width: 65px;
+  ${smallerScreen} {
+    margin: 30px auto;
+  }
 `
 
 const DownloadModal = () => {
@@ -100,6 +111,8 @@ const DownloadModal = () => {
 
   return (
     <>
+      {/*       <ScrollLock isActive={showDownloadModal} /> */}
+
       <ModalBody open={showDownloadModal}>
         <CloseButton onClick={() => toggleDownloadModal()}>
           <FaTimes style={{ marginRight: '10px' }} /> Close
@@ -113,26 +126,19 @@ const DownloadModal = () => {
           fontWeight="500"
           textAlign="center"
         >
-          Download app to view events
+          Download app
         </Text>
-        <Text
-          fontSize={2}
-          color="textGrey"
-          mt={20}
-          textAlign="center"
-          mr={50}
-          ml={50}
-        >
+        <Text fontSize={2} color="textGrey" mt={20} textAlign="center">
           Our app is available on App store or Google play. It will connect you
           with nearby travelers and local. You can find all events there.
         </Text>
         <Grid>
-          <div>
+          <a href="https://apps.apple.com/us/app/travelr-solo-travel-in-japan/id1479677020?mt=8" target="_blank">
             <DownloadIcon src={data.appstore.childImageSharp.fluid.src} />
-          </div>
-          <div>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.travelr" target="_blank">
             <DownloadIcon src={data.googleplay.childImageSharp.fluid.src} />
-          </div>
+          </a>
         </Grid>
       </ModalBody>
       <Cover open={showDownloadModal} onClick={() => toggleDownloadModal()} />

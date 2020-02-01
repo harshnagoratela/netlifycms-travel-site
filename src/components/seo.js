@@ -34,6 +34,10 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`%s`}
       meta={[
         {
+          name: "apple-itunes-app",
+          content: "app-id=1479677020"
+        },
+        {
           name: `description`,
           content: metaDescription,
         },

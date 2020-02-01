@@ -25,6 +25,9 @@ const Subtitle = styled.p`
 
 const PageBody = styled.div`
   margin-top: 50px;
+  ${smallerScreen} {
+    padding: 0 1rem;
+  }
 `
 
 const PostTitle = styled.h1`

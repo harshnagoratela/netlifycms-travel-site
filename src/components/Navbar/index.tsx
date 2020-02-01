@@ -26,8 +26,8 @@ const NavbarLink = styled(Link)`
   color: #fff;
   padding: 0 15px;
   margin: 0 10px;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: none !important;
 `
@@ -105,7 +105,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <React.Fragment>
+    <>
       <BodyWrap>
         <NavbarWrapper>
           <Link to="/">
@@ -134,7 +134,7 @@ const Navbar = () => {
           </Link>
         ))}
       </MobileNavigationProps>
-    </React.Fragment>
+    </>
   )
 }
 
