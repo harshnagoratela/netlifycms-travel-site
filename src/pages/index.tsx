@@ -13,6 +13,7 @@ import { smallerScreen } from '../helpers/breakpoints'
 import { color, fontSize } from 'styled-system'
 import { useStaticQuery, graphql } from 'gatsby'
 import Hero from '../components/Hero'
+import LandingPageArticles from '../components/LandingPageArticles'
 
 const TextIntroduction = styled.div`
   display: grid;
@@ -103,6 +104,8 @@ const IndexPage = ({ intl }) => {
 
       <UpcomingEvents />
       <StoryBox />
+
+      <LandingPageArticles />
       <CtaBanner />
     </Layout>
   )

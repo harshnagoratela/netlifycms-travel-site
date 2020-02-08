@@ -40,7 +40,7 @@
     "react-responsive-carousel": "^3.1.51",
     "react-scrolllock": "^5.0.0",
     "react-stickynode": "^2.1.1",
-    "styled-components": "^4.4.1",
+    "styled-components": "^5.0.1",
     "styled-system": "^5.1.4",
     "uuid": "^3.2.1"
   },

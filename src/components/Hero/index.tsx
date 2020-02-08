@@ -7,6 +7,7 @@ import { BodyWrap } from '../../helpers/common'
 import WebContext from '../../helpers/WebContext'
 import { useMediaQuery } from 'react-responsive'
 import { FaArrowDown } from 'react-icons/fa'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const IntroBackground = styled.div`
   position: absolute;
@@ -51,7 +52,7 @@ const MobileBackgroundImage = styled.div`
   position: absolute;
   z-index: 8;
   object-fit: cover;
-  background-image: url('/img/mobileHero.png');
+  background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   border-radius: 0 0 0 100px;
 `
@@ -66,7 +67,7 @@ const IntroWrap = styled.div`
   min-height: 560px;
   overflow: hidden;
 
-  ${smallScreen}{
+  ${smallScreen} {
     height: 80vh;
   }
 `
@@ -143,6 +144,18 @@ const Hero = () => {
   const { toggleDownloadModal } = useContext(WebContext)
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
+  const data = useStaticQuery(graphql`
+    query {
+      mobileHero: file(relativePath: { eq: "mobileHero.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 768) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <IntroWrap>
       <IntroBackground>
@@ -174,7 +187,11 @@ const Hero = () => {
         </BackgroundVideo>
       )}
 
-      {isMobile && <MobileBackgroundImage />}
+      {isMobile && (
+        <MobileBackgroundImage
+          url={data.mobileHero.childImageSharp.fluid.src}
+        />
+      )}
     </IntroWrap>
   )
 }

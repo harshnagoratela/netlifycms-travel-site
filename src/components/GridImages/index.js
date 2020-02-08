@@ -17,15 +17,17 @@ const Grid = styled.div`
   }
 `
 const Title = styled.div`
-  font-size: 1.1em;
-  color: ${({ theme }) => theme.colors.textGrey};
-`
-
-const Subtitle = styled.div`
   font-size: 1.4em;
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 600;
 `
+
+const Subtitle = styled.div`
+  font-size: 1em;
+  color: ${({ theme }) => theme.colors.textGrey};
+  min-height: 25px;
+`
+
 const GridBlock = styled.div`
   text-align: center;
   ${smallerScreen} {
@@ -76,19 +78,19 @@ const GridImages = () => {
     <BodyWrap>
       <Grid>
         <GridBlock>
-          <Title>Travel solo</Title>
-          <Subtitle>have fun together</Subtitle>
+          <Title>Enjoy and share</Title>
+          <Subtitle> meet other travelers and locals at our events</Subtitle>
           <Image src={data.grid1.childImageSharp.fluid.src} />
         </GridBlock>
         <GridBlock>
-          <Title>Enjoy and share</Title>
-          <Subtitle>many types of events</Subtitle>
+          <Title>Chat & ask</Title>
+          <Subtitle>be part of Travelr community in Japan</Subtitle>
           <Image src={data.grid2.childImageSharp.fluid.src} />
         </GridBlock>
 
         <GridBlock>
-          <Title>Events created </Title>
-          <Subtitle>by locals</Subtitle>
+          <Title>Meet locals</Title>
+          <Subtitle>all events are free and created by local people</Subtitle>
           <Image src={data.grid3.childImageSharp.fluid.src} />
         </GridBlock>
       </Grid>
