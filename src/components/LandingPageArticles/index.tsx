@@ -9,14 +9,19 @@ const PostWrap = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
+  margin-top: 50px;
 
-  ${smallScreen}{
+  ${smallScreen} {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
   }
 `
 
 const Title = styled.h2`
-
+  margin-top: 50px;
+  ${smallScreen} {
+    padding: 0 1rem;
+  }
 `
 
 const LandingPageArticles = ({ data }) => {
@@ -24,7 +29,7 @@ const LandingPageArticles = ({ data }) => {
 
   return (
     <BodyWrap>
-        <Title>Latest Japan travel tips</Title>
+      <Title>Latest Japan travel tips</Title>
 
       <PostWrap>
         {posts && posts.map(({ node: post }) => <SingleArticle post={post} />)}

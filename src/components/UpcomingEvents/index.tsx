@@ -12,7 +12,7 @@ import WebContext from '../../helpers/WebContext'
 
 const UpcomingWrap = styled.div`
   background: rgba(9, 5, 76, 0.03);
-  padding: 60px 0;
+  padding: 90px 0;
 `
 
 const Grid = styled.div`

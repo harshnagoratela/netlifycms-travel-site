@@ -8,7 +8,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 40px;
-  margin: 70px 0 100px;
+  margin: 120px 0;
 
   ${smallerScreen} {
     grid-template-columns: 1fr;
@@ -26,6 +26,7 @@ const Subtitle = styled.div`
   font-size: 1em;
   color: ${({ theme }) => theme.colors.textGrey};
   min-height: 25px;
+  min-height: 50px;
 `
 
 const GridBlock = styled.div`
@@ -50,21 +51,21 @@ const Image = styled.img`
 const GridImages = () => {
   const data = useStaticQuery(graphql`
     query {
-      grid1: file(relativePath: { eq: "grid_1.png" }) {
+      grid1: file(relativePath: { eq: "grid_1_new.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid2: file(relativePath: { eq: "grid_2.png" }) {
+      grid2: file(relativePath: { eq: "grid_2_new.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid3: file(relativePath: { eq: "grid_3.png" }) {
+      grid3: file(relativePath: { eq: "grid_3_new.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
@@ -78,19 +79,19 @@ const GridImages = () => {
     <BodyWrap>
       <Grid>
         <GridBlock>
-          <Title>Enjoy and share</Title>
-          <Subtitle> meet other travelers and locals at our events</Subtitle>
+          <Title>Hang out</Title>
+          <Subtitle>Be spontaneous and jump into hang outs happing near you right now, like right now.</Subtitle>
           <Image src={data.grid1.childImageSharp.fluid.src} />
         </GridBlock>
         <GridBlock>
-          <Title>Chat & ask</Title>
-          <Subtitle>be part of Travelr community in Japan</Subtitle>
+          <Title>Chit chat</Title>
+          <Subtitle>Ask questions and get travel tips from locals & travelers.</Subtitle>
           <Image src={data.grid2.childImageSharp.fluid.src} />
         </GridBlock>
 
         <GridBlock>
-          <Title>Meet locals</Title>
-          <Subtitle>all events are free and created by local people</Subtitle>
+          <Title>Get local</Title>
+          <Subtitle>Hang out with locals like friends not tour guides.</Subtitle>
           <Image src={data.grid3.childImageSharp.fluid.src} />
         </GridBlock>
       </Grid>

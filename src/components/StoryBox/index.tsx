@@ -53,6 +53,11 @@ const IFrameWrapper = styled.div`
     top: 0;
     width: 100%;
   }
+
+  ${smallerScreen}{
+    width: 95%;
+    margin: 0 auto;
+  }
 `
 
 const StoryBox = () => {

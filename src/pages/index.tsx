@@ -24,6 +24,7 @@ const TextIntroduction = styled.div`
     grid-template-columns: 1fr;
     padding: 0 20px;
     margin: 80px auto;
+    max-width: 100%;
   }
 `
 
@@ -51,11 +52,7 @@ const AppImageWrapper = styled.div`
     max-height: 400px;
   }
   ${smallerScreen} {
-    text-align: left;
-    img {
-      max-height: 300px;
-      padding: 0;
-    }
+    display: none;
   }
 `
 

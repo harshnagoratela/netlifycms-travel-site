@@ -88,7 +88,7 @@ const MainTitle = styled.h1`
 const Subtitle = styled.p`
   color: #fff;
   text-shadow: 1px 1px #000000;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
   ${smallerScreen} {
     display: none;
@@ -163,13 +163,15 @@ const Hero = () => {
         <RelativeBodyWrap>
           <IntroFlex>
             <MainTitle fontSize={5}>
-              Share and experience <br /> Japan together
+              Traveling in Japan?
+              <br /> Travel social.
             </MainTitle>
-            {/*             <Subtitle fontSize={1}>
-              Explore, Eat, and Party with new friends on TRAVELR app.
-            </Subtitle> */}
+            <Subtitle>
+              Karaoke, secret walks & ramen... hang out locals & travelers in
+              Japan
+            </Subtitle>
             <DownloadButton onClick={() => toggleDownloadModal()}>
-              Get Travelr app now
+              Find events & hang out
             </DownloadButton>
           </IntroFlex>
         </RelativeBodyWrap>
