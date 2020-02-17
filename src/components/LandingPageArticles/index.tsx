@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from 'gatsby'
 import SingleArticle from '../SingleArticle'
 import { BodyWrap } from '../../helpers/common'
 import styled from 'styled-components'
-import { smallScreen } from '../../helpers/breakpoints'
+import { smallScreen, mediumScreen } from '../../helpers/breakpoints'
 
 const PostWrap = styled.div`
   display: grid;
@@ -11,7 +11,7 @@ const PostWrap = styled.div`
   grid-column-gap: 40px;
   margin-top: 50px;
 
-  ${smallScreen} {
+  ${mediumScreen} {
     grid-template-columns: 1fr;
     padding: 0 1rem;
   }
@@ -19,7 +19,7 @@ const PostWrap = styled.div`
 
 const Title = styled.h2`
   margin-top: 50px;
-  ${smallScreen} {
+  ${mediumScreen} {
     padding: 0 1rem;
   }
 `

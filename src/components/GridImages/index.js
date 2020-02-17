@@ -51,21 +51,21 @@ const Image = styled.img`
 const GridImages = () => {
   const data = useStaticQuery(graphql`
     query {
-      grid1: file(relativePath: { eq: "grid_1_new.jpg" }) {
+      grid1: file(relativePath: { eq: "landing-grid/grid_1.png" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid2: file(relativePath: { eq: "grid_2_new.jpg" }) {
+      grid2: file(relativePath: { eq: "landing-grid/grid_2.png" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid3: file(relativePath: { eq: "grid_3_new.jpg" }) {
+      grid3: file(relativePath: { eq: "landing-grid/grid_3.png" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid

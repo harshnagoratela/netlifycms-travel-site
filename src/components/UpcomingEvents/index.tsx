@@ -26,7 +26,11 @@ const Grid = styled.div`
   }
 `
 
-const Event = styled.div``
+const Event = styled.div`
+  ${smallerScreen} {
+    padding: 0 30px;
+  }
+`
 
 const EventTitle = styled.div`
   position: absolute;
@@ -46,9 +50,10 @@ const EventHeader = styled.div<{ background: string }>`
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  border-radius: 6px;
 
   ${smallerScreen} {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 `
@@ -59,7 +64,7 @@ const EventDescription = styled.p`
   margin-bottom: 20px;
   line-height: 20px;
   ${smallerScreen} {
-    width: 90%;
+    width: 100%;
   }
 `
 
@@ -73,6 +78,18 @@ const Title = styled.h3`
 const MobileCarousel = styled(Carousel)`
   .carousel .slide {
     background: transparent;
+  }
+
+  .carousel.carousel-slider .control-arrow.control-prev {
+    &:before {
+      border-right: 8px solid #632ea8 !important;
+    }
+  }
+
+  .carousel.carousel-slider .control-arrow.control-next {
+    &:before {
+      border-left: 8px solid #632ea8 !important;
+    }
   }
 `
 
@@ -102,11 +119,10 @@ const UpcomingEvents = () => {
         </Text>
         <MobileCarousel
           showThumbs={false}
-          centerMode
           infiniteLoop
           showIndicators={false}
-          selectedItem={2}
-          showArrows={false}
+          selectedItem={1}
+          showArrows={true}
           showStatus={false}
         >
           <Event>

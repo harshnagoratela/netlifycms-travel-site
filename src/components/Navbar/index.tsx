@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
-import logo from '../../img/logo.png'
+import logo from '../../img/travelr_logo.png'
 import { smallerScreen } from '../../helpers/breakpoints'
 import BurgerMenu from '../BurgerMenu'
 import { Link } from 'gatsby'
 
 const Logo = styled.img`
-  max-width: 50px;
+  max-width: 100px;
 `
 const NavbarWrapper = styled.div`
   display: flex;
