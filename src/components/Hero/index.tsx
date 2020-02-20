@@ -155,7 +155,7 @@ const Hero = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      mobileHero: file(relativePath: { eq: "mobileHeader.jpg" }) {
+      mobileHeader: file(relativePath: { eq: "mobileHeader.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 768) {
             ...GatsbyImageSharpFluid
@@ -211,16 +211,14 @@ const Hero = () => {
         </BackgroundVideo>
       )} */}
 
-      {!isMobile && (
+      {isMobile ? (
+        <MobileBackgroundImage
+          url={data.mobileHeader.childImageSharp.fluid.src}
+          rounded
+        />
+      ) : (
         <MobileBackgroundImage
           url={data.heroBackground.childImageSharp.fluid.src}
-        />
-      )}
-
-      {isMobile && (
-        <MobileBackgroundImage
-          url={data.mobileHero.childImageSharp.fluid.src}
-          rounded
         />
       )}
     </IntroWrap>
