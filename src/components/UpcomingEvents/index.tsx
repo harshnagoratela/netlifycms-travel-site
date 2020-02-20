@@ -127,7 +127,7 @@ const UpcomingEvents = () => {
     return (
       <UpcomingWrap>
         <Title>Upcoming events</Title>
-        <Text color="textGrey" fontSize={1} mb="60px" textAlign="center">
+        <Text color="textGrey" fontSize={1} mb="40px" textAlign="center">
           You don’t need to pay for a guide to have fun in Japan. Meet great
           friends on TRAVELR and hang out now.
         </Text>
@@ -184,7 +184,7 @@ const UpcomingEvents = () => {
     <UpcomingWrap>
       <BodyWrap>
         <Title>Upcoming events</Title>
-        <Text color="textGrey" fontSize={1} mb={60} textAlign="center">
+        <Text color="textGrey" fontSize={1} mb="60px" textAlign="center">
           You don’t need to pay for a guide to have fun in Japan. Meet great
           friends on TRAVELR and hang out now.
         </Text>

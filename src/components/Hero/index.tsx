@@ -6,7 +6,6 @@ import { smallerScreen, smallScreen } from '../../helpers/breakpoints'
 import Navbar from '../Navbar'
 import { BodyWrap } from '../../helpers/common'
 import WebContext from '../../helpers/WebContext'
-import { useMediaQuery } from 'react-responsive'
 import { FaArrowDown } from 'react-icons/fa'
 import { useStaticQuery, graphql } from 'gatsby'
 import Typist from 'react-typist'
@@ -48,6 +47,7 @@ const BackgroundVideo = styled.video`
 `
 
 const MobileBackgroundImage = styled.div`
+  display: none;
   min-width: 100vw;
   max-width: 100%;
   height: 100%;
@@ -57,6 +57,17 @@ const MobileBackgroundImage = styled.div`
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   border-radius: ${({ rounded }) => (rounded ? `0 0 0 100px` : '0')};
+  ${smallerScreen} {
+    display: block;
+  }
+`
+
+const DesktopBackgroundImage = styled(MobileBackgroundImage)`
+  border-radius: 0;
+  display: block;
+  ${smallerScreen} {
+    display: none;
+  }
 `
 
 const IntroWrap = styled.div`
@@ -119,7 +130,7 @@ const DownloadButton = styled.div`
 
   ${smallerScreen} {
     padding: 20px 0;
-    width: 100%;
+    width: 260px;
   }
 `
 
@@ -154,7 +165,6 @@ const RelativeBodyWrap = styled(BodyWrap)`
 
 const Hero = () => {
   const { toggleDownloadModal } = useContext(WebContext)
-  const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
   const data = useStaticQuery(graphql`
     query {
@@ -213,16 +223,14 @@ const Hero = () => {
         </BackgroundVideo>
       )} */}
 
-      {isMobile ? (
-        <MobileBackgroundImage
-          url={data.mobileHeader.childImageSharp.fluid.src}
-          rounded
-        />
-      ) : (
-        <MobileBackgroundImage
-          url={data.heroBackground.childImageSharp.fluid.src}
-        />
-      )}
+      <MobileBackgroundImage
+        url={data.mobileHeader.childImageSharp.fluid.src}
+        rounded
+      />
+
+      <DesktopBackgroundImage
+        url={data.heroBackground.childImageSharp.fluid.src}
+      />
     </IntroWrap>
   )
 }
