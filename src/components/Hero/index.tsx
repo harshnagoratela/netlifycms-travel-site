@@ -132,6 +132,9 @@ const ScrollMore = styled.div`
   color: #fff;
   text-align: center;
   z-index: 999;
+  ${smallerScreen} {
+    display: none;
+  }
 `
 
 const IntroFlex = styled.div`
@@ -197,11 +200,10 @@ const Hero = () => {
             </DownloadButton>
           </IntroFlex>
         </RelativeBodyWrap>
-        {!isMobile && (
-          <ScrollMore>
-            <FaArrowDown />
-          </ScrollMore>
-        )}
+
+        <ScrollMore>
+          <FaArrowDown />
+        </ScrollMore>
       </IntroBackground>
 
       {/* {!isMobile && (

@@ -37,3 +37,15 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/about/index.md"
+        label: "Landing page"
+        create: false
+        name: "landing"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+          - label: "Events"
+            name: "upcomingEvents"
+            widget: "list"
+            field: {image: Image, name: "string", description: "text"}
