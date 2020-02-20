@@ -17,7 +17,8 @@ const Grid = styled.div`
   }
 `
 const Title = styled.div`
-  font-size: 1.4em;
+  font-size: 1.7em;
+  letter-spacing: 0.01rem;
   color: ${({ theme }) => theme.colors.primary};
   font-weight: 600;
 `
@@ -30,7 +31,7 @@ const Subtitle = styled.div`
 `
 
 const GridBlock = styled.div`
-  text-align: center;
+  text-align: left;
   ${smallerScreen} {
     margin-top: 50px;
   }
@@ -51,21 +52,21 @@ const Image = styled.img`
 const GridImages = () => {
   const data = useStaticQuery(graphql`
     query {
-      grid1: file(relativePath: { eq: "landing-grid/grid_1.png" }) {
+      grid1: file(relativePath: { eq: "landing-grid/grid_1.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid2: file(relativePath: { eq: "landing-grid/grid_2.png" }) {
+      grid2: file(relativePath: { eq: "landing-grid/grid_2.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      grid3: file(relativePath: { eq: "landing-grid/grid_3.png" }) {
+      grid3: file(relativePath: { eq: "landing-grid/grid_3.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 460) {
             ...GatsbyImageSharpFluid

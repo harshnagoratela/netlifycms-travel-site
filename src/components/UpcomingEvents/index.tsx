@@ -99,7 +99,21 @@ const UpcomingEvents = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      karaoke: file(relativePath: { eq: "asakusa.jpg" }) {
+      karaoke: file(relativePath: { eq: "events/karaoke.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      harajuku: file(relativePath: { eq: "events/harajuku_secret_walk.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      sake: file(relativePath: { eq: "events/sake_tasting.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 300) {
             ...GatsbyImageSharpFluid
@@ -138,7 +152,7 @@ const UpcomingEvents = () => {
             </RoundedButton>
           </Event>
           <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
+            <EventHeader background={data.sake.childImageSharp.fluid.src}>
               <EventTitle>Takoyaki party</EventTitle>
             </EventHeader>
             <EventDescription>
@@ -150,7 +164,7 @@ const UpcomingEvents = () => {
             </RoundedButton>
           </Event>
           <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
+            <EventHeader background={data.harajuku.childImageSharp.fluid.src}>
               <EventTitle>Takoyaki party</EventTitle>
             </EventHeader>
             <EventDescription>
@@ -177,7 +191,7 @@ const UpcomingEvents = () => {
         <Grid>
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+              <EventTitle>Karaoke</EventTitle>
             </EventHeader>
             <EventDescription>
               Learn how to make Takoyaki and eat them with fellow travelers. We
@@ -188,8 +202,8 @@ const UpcomingEvents = () => {
             </RoundedButton>
           </Event>
           <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+            <EventHeader background={data.sake.childImageSharp.fluid.src}>
+              <EventTitle>Sake tasting</EventTitle>
             </EventHeader>
             <EventDescription>
               Learn how to make Takoyaki and eat them with fellow travelers. We
@@ -200,8 +214,8 @@ const UpcomingEvents = () => {
             </RoundedButton>
           </Event>
           <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+            <EventHeader background={data.harajuku.childImageSharp.fluid.src}>
+              <EventTitle>Harajuku secret walk</EventTitle>
             </EventHeader>
             <EventDescription>
               Learn how to make Takoyaki and eat them with fellow travelers. We

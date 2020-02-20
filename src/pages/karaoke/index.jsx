@@ -9,6 +9,7 @@ import Navbar from '../../components/Navbar'
 import CtaBanner from '../../components/CtaBanner'
 import { useStaticQuery } from 'gatsby'
 import KaraokeCalculator from '../../components/KaraokeCalculator'
+import PageHeader from '../../components/PageHeader'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -106,15 +107,10 @@ const KaraokePage = () => {
     <Layout>
       <SEO title={`Karaoke in Japan | Travelr app`} />
 
-      <HeaderBackground>
-        <Navbar />
-        <BodyWrap>
-          <MainTitle>Karaoke</MainTitle>
-          <Subtitle>
-            Get discounts for Japan most beloved social activity
-          </Subtitle>
-        </BodyWrap>
-      </HeaderBackground>
+      <PageHeader
+        title="Karaoke"
+        subtitle=" Get discounts for Japan most beloved social activity"
+      />
 
       <BodyWrap>
         <Grid>

@@ -44,6 +44,7 @@ const IFrameWrapper = styled.div`
   padding-top: 56.25%;
   position: relative;
   width: 100%;
+  margin: 75px 0;
 
   iframe {
     border: 0;
@@ -54,7 +55,7 @@ const IFrameWrapper = styled.div`
     width: 100%;
   }
 
-  ${smallerScreen}{
+  ${smallerScreen} {
     width: 95%;
     margin: 0 auto;
   }
@@ -100,11 +101,14 @@ const StoryBox = () => {
       <BodyWrap>
         <IFrameWrapper>
           <iframe
-            src="https://player.vimeo.com/video/347237870"
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/epQBh8F7Cks"
             frameborder="0"
-            allow="autoplay; fullscreen"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
+
         </IFrameWrapper>
       </BodyWrap>
     </React.Fragment>

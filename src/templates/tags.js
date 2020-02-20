@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import { HeaderBackground, BodyWrap } from '../helpers/common'
+import { BodyWrap } from '../helpers/common'
 import Navbar from '../components/Navbar'
 import Tags from '../components/Tags'
-import { MainTitle, Subtitle, BlogBody } from '../pages/blog'
+import { BlogBody } from '../pages/blog'
 import SingleArticle from '../components/SingleArticle'
 import DesktopBanner from '../components/DesktopBanner'
 import SEO from '../components/seo'
+import PageHeader from '../components/PageHeader'
 
 class TagRoute extends React.Component {
   render() {
@@ -17,14 +18,10 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <SEO title={`${tag} articles | Travelr app`} />
-        <HeaderBackground>
-          <Navbar />
-          <BodyWrap>
-            <MainTitle>{tag}</MainTitle>
-            <Subtitle>Read about interesting Japan travel tips</Subtitle>
-          </BodyWrap>
-        </HeaderBackground>
-
+        <PageHeader
+          title={tag}
+          subtitle="Read about interesting Japan travel tips"
+        />
         <BodyWrap>
           <Tags activeTag={tag} />
           <BlogBody>

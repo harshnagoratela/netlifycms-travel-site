@@ -3,27 +3,13 @@ import styled from 'styled-components'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-import Navbar from '../../components/Navbar'
-import { BodyWrap, HeaderBackground } from '../../helpers/common'
+import { BodyWrap } from '../../helpers/common'
 import { smallerScreen } from '../../helpers/breakpoints'
 import BlogRoll from '../../components/BlogRoll'
 import DesktopBanner from '../../components/DesktopBanner'
 import { useMediaQuery } from 'react-responsive'
 import Tags from '../../components/Tags'
-
-export const MainTitle = styled.h1`
-  margin-top: 60px;
-  color: #fff;
-  padding: 0 20px;
-  ${smallerScreen} {
-    font-size: 1.7rem;
-  }
-`
-
-export const Subtitle = styled.p`
-  color: #fff;
-  padding: 0 20px;
-`
+import PageHeader from '../../components/PageHeader'
 
 export const BlogBody = styled.div`
   display: grid;
@@ -42,15 +28,10 @@ const Blog = () => {
 
   return (
     <Layout>
-      <HeaderBackground>
-        <Navbar />
-        <BodyWrap>
-          <MainTitle>Japan travel tips</MainTitle>
-          <Subtitle>
-            Food, places, people… We are writing about everything
-          </Subtitle>
-        </BodyWrap>
-      </HeaderBackground>
+      <PageHeader
+        title="Japan travel tips"
+        subtitle=" Food, places, people… We are writing about everything"
+      />
 
       <BodyWrap>
         <Tags />

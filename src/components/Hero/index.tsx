@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import videoBackground from '../../../static/travelr_hero.mp4'
+/* import videoBackground from '../../../static/travelr_hero.mp4'
+ */
 import { smallerScreen, smallScreen } from '../../helpers/breakpoints'
 import Navbar from '../Navbar'
 import { BodyWrap } from '../../helpers/common'
@@ -8,6 +9,7 @@ import WebContext from '../../helpers/WebContext'
 import { useMediaQuery } from 'react-responsive'
 import { FaArrowDown } from 'react-icons/fa'
 import { useStaticQuery, graphql } from 'gatsby'
+import Typist from 'react-typist'
 
 const IntroBackground = styled.div`
   position: absolute;
@@ -54,7 +56,7 @@ const MobileBackgroundImage = styled.div`
   object-fit: cover;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
-  border-radius: 0 0 0 100px;
+  border-radius: ${({ rounded }) => (rounded ? `0 0 0 100px` : '0')};
 `
 
 const IntroWrap = styled.div`
@@ -77,8 +79,9 @@ const MainTitle = styled.h1`
   margin: 0;
   font-size: 3em;
   text-shadow: 1px 1px #000000;
+  letter-spacing: 0.03rem;
   ${smallerScreen} {
-    font-size: 2.1em;
+    font-size: 1.9em;
     text-align: left;
     font-weight: 600;
     text-shadow: 1px 1px #0202023d;
@@ -90,6 +93,7 @@ const Subtitle = styled.p`
   text-shadow: 1px 1px #000000;
   font-size: 1.1rem;
   text-align: center;
+  letter-spacing: 0.01rem;
   ${smallerScreen} {
     display: none;
   }
@@ -112,6 +116,11 @@ const DownloadButton = styled.div`
   &:hover {
     background: #1a051d;
   }
+
+  ${smallerScreen} {
+    padding: 20px 0;
+    width: 100%;
+  }
 `
 
 const ScrollMore = styled.div`
@@ -130,8 +139,8 @@ const IntroFlex = styled.div`
   position: absolute;
   top: 30vh;
   ${smallerScreen} {
-    top: 25vh;
-    padding: 0 2rem;
+    top: 35vh;
+    padding: 0 1.5rem;
     box-sizing: border-box;
   }
 `
@@ -146,9 +155,16 @@ const Hero = () => {
 
   const data = useStaticQuery(graphql`
     query {
-      mobileHero: file(relativePath: { eq: "mobileHero.png" }) {
+      mobileHero: file(relativePath: { eq: "mobileHeader.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 768) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      heroBackground: file(relativePath: { eq: "header.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1980) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -162,10 +178,16 @@ const Hero = () => {
         <Navbar />
         <RelativeBodyWrap>
           <IntroFlex>
-            <MainTitle fontSize={5}>
-              Traveling in Japan?
-              <br /> Travel social.
-            </MainTitle>
+            <MainTitle fontSize={5}>Traveling in Japan?</MainTitle>
+            <Typist cursor={{ show: false }} avgTypingDelay={100}>
+              <MainTitle fontSize={5}>
+                <span>Travel better...</span>
+                <Typist.Backspace count={9} delay={1500} />
+                <span>and explore...</span>
+                <Typist.Backspace count={14} delay={1500} />
+                <span>social!</span>
+              </MainTitle>
+            </Typist>
             <Subtitle>
               Karaoke, secret walks & ramen... hang out locals & travelers in
               Japan
@@ -182,16 +204,23 @@ const Hero = () => {
         )}
       </IntroBackground>
 
-      {!isMobile && (
+      {/* {!isMobile && (
         <BackgroundVideo id="background-video" loop autoPlay muted>
           <source src={videoBackground} type="video/mp4" />
           Your browser does not support the video tag.
         </BackgroundVideo>
+      )} */}
+
+      {!isMobile && (
+        <MobileBackgroundImage
+          url={data.heroBackground.childImageSharp.fluid.src}
+        />
       )}
 
       {isMobile && (
         <MobileBackgroundImage
           url={data.mobileHero.childImageSharp.fluid.src}
+          rounded
         />
       )}
     </IntroWrap>

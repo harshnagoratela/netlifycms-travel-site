@@ -27,8 +27,10 @@ const NavbarLink = styled(Link)`
   padding: 0 15px;
   margin: 0 10px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
+  letter-spacing: 0.01rem;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.29);
   text-decoration: none !important;
 `
 

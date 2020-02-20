@@ -1,27 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import Navbar from '../components/Navbar'
-import { BodyWrap, HeaderBackground } from '../helpers/common'
+import { BodyWrap } from '../helpers/common'
 import styled from 'styled-components'
 import { smallerScreen } from '../helpers/breakpoints'
 import SEO from '../components/seo'
-
-const MainTitle = styled.h1`
-  margin-top: 60px;
-  color: #fff;
-  padding: 0 20px;
-  ${smallerScreen} {
-    font-size: 1.7rem;
-  }
-`
-
-const Subtitle = styled.p`
-  color: #fff;
-  padding: 0 20px;
-`
+import PageHeader from '../components/PageHeader'
 
 const PageBody = styled.div`
   margin-top: 50px;
@@ -38,22 +23,16 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <React.Fragment>
+    <>
       <SEO title={`${title} | Travelr app`} />
-
-      <HeaderBackground>
-        <Navbar />
-        <BodyWrap>
-          <MainTitle>{title}</MainTitle>
-        </BodyWrap>
-      </HeaderBackground>
+      <PageHeader title={title} />
       <BodyWrap>
         <PageBody>
           <PostTitle>{title}</PostTitle>
           <PageContent className="content" content={content} />
         </PageBody>
       </BodyWrap>
-    </React.Fragment>
+    </>
   )
 }
 
@@ -69,10 +48,6 @@ const AboutPage = ({ data }) => {
       />
     </Layout>
   )
-}
-
-AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
 }
 
 export default AboutPage
