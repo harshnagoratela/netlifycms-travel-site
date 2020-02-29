@@ -2,10 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Layout from '../../components/Layout'
 import SEO from '../../components/seo'
-
-import { BodyWrap, HeaderBackground } from '../../helpers/common'
+import { BodyWrap } from '../../helpers/common'
 import { smallerScreen } from '../../helpers/breakpoints'
-import Navbar from '../../components/Navbar'
 import CtaBanner from '../../components/CtaBanner'
 import { useStaticQuery } from 'gatsby'
 import KaraokeCalculator from '../../components/KaraokeCalculator'
@@ -131,14 +129,14 @@ const KaraokePage = () => {
               connect with othes easier than before.
             </Paragraph>
 
-            <PlacesWrap>
+            {/*         <PlacesWrap>
               {PRICES.map(place => (
                 <Place>
                   <div>{place.name}</div>
                   <strong>{place.price}</strong>
                 </Place>
               ))}
-            </PlacesWrap>
+            </PlacesWrap> */}
           </KaraokeBody>
 
           <div>
@@ -150,7 +148,7 @@ const KaraokePage = () => {
         </Grid>
       </BodyWrap>
 
-      <KaraokeCalculator />
+      {/*    <KaraokeCalculator /> */}
 
       <CtaBanner />
     </Layout>

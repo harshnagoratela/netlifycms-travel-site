@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import { BodyWrap } from '../../helpers/common'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { smallerScreen } from '../../helpers/breakpoints'
-import ThemeContext from '../../helpers/WebContext'
 import DownloadModal from '../DownloadModal'
-import WebContext from '../../helpers/WebContext'
+import { Link } from 'gatsby'
 
 const FooterWrap = styled.div`
   height: 60px;
@@ -33,27 +32,34 @@ const Social = styled.div`
 `
 
 const Footer = () => {
-  const { showDownloadModal } = React.useContext(WebContext)
-
   return (
     <FooterWrap>
       <DownloadModal />
       <BodyWrap>
         <Flex>
-          © 2019 Travelr | All Rights Reserved
+          TRAVELR INC. | TOKYO, JAPAN
+          <Link to="/terms">Terms & privacy</Link>
           <Social>
-            <FaFacebook
-              style={{ marginRight: '20px', color: '#5b2da9' }}
-              size={20}
-            />
-            <FaInstagram
-              style={{ marginRight: '20px', color: '#5b2da9' }}
-              size={20}
-            />
-            <FaTwitter
-              style={{ marginRight: '20px', color: '#5b2da9' }}
-              size={20}
-            />
+            <a
+              href="https://www.facebook.com/japansolotraveler/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook
+                style={{ marginRight: '20px', color: '#5b2da9' }}
+                size={20}
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/travelrjapan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram
+                style={{ marginRight: '20px', color: '#5b2da9' }}
+                size={20}
+              />
+            </a>
           </Social>
         </Flex>
       </BodyWrap>
