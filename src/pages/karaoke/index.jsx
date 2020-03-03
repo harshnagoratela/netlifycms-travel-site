@@ -34,6 +34,11 @@ const Grid = styled.div`
   grid-template-columns: 60% 40%;
   grid-column-gap: 50px;
   margin-top: 120px;
+  ${smallerScreen} {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin-top: 40px;
+  }
 `
 
 const Place = styled.div`
@@ -115,18 +120,18 @@ const KaraokePage = () => {
           <KaraokeBody>
             <h1>About Karaoke</h1>
             <Paragraph>
-              Life’s better with people—and now there’s a new way to meet them
-              with local events and new app that made them possible. Every
-              experience is selected and created by local people, so you can
-              connect with othes easier than before.
+              Karaoke (カラオケ) originated in Japan and is now popular around
+              the world, especially in Asia... But in Japan, it’s still a
+              beloved activity number one. One can also order food and drinks in
+              most karaoke places and spend a good time together.
             </Paragraph>
 
             <SecondaryTitle>Average prices across japan</SecondaryTitle>
             <Paragraph>
-              Life’s better with people—and now there’s a new way to meet them
-              with local events and new app that made them possible. Every
-              experience is selected and created by local people, so you can
-              connect with othes easier than before.
+              The average price is usually calculated in 30-minute blocks and is
+              approximately 100-200 yen per 30 minutes on weekdays, 400-500 yen
+              on weekends and 1,500-2,500 yen for most popular times. (Usually
+              between 11 pm and 5 am)
             </Paragraph>
 
             {/*         <PlacesWrap>

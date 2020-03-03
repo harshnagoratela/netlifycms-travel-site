@@ -98,10 +98,8 @@ const IndexPage = ({ intl }) => {
           </IntroductionFlex>
         </TextIntroduction>
       </BodyWrap>
-
       <UpcomingEvents />
       <StoryBox />
-
       <LandingPageArticles />
       <CtaBanner />
     </Layout>

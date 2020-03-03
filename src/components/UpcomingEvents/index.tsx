@@ -105,14 +105,14 @@ const UpcomingEvents = () => {
             ...GatsbyImageSharpFluid
           }
         }
-      },
+      }
       harajuku: file(relativePath: { eq: "events/harajuku_secret_walk.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 300) {
             ...GatsbyImageSharpFluid
           }
         }
-      },
+      }
       sake: file(relativePath: { eq: "events/sake_tasting.jpg" }) {
         childImageSharp {
           fluid(maxHeight: 300) {
@@ -141,11 +141,11 @@ const UpcomingEvents = () => {
         >
           <Event>
             <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+              <EventTitle>Karaoke</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Karaoke is Japan's most beloved social activity. Join us and dind
+              out why!
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
@@ -153,11 +153,11 @@ const UpcomingEvents = () => {
           </Event>
           <Event>
             <EventHeader background={data.sake.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+              <EventTitle>Sake tasting</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Fully experience the traditional Japanese drink and try many types
+              of Sake. They all taste different. Find your favorite!
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
@@ -165,11 +165,11 @@ const UpcomingEvents = () => {
           </Event>
           <Event>
             <EventHeader background={data.harajuku.childImageSharp.fluid.src}>
-              <EventTitle>Takoyaki party</EventTitle>
+              <EventTitle>Harajuku secret walk</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Explore one of the most stylish and exciting parts of Tokyo with
+              local people.
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
@@ -194,8 +194,8 @@ const UpcomingEvents = () => {
               <EventTitle>Karaoke</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Karaoke is Japan's most beloved social activity. Join us and dind
+              out why!
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
@@ -206,8 +206,8 @@ const UpcomingEvents = () => {
               <EventTitle>Sake tasting</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Fully experience the traditional Japanese drink, try many types
+              of Sake and find your favorite!
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
@@ -218,8 +218,8 @@ const UpcomingEvents = () => {
               <EventTitle>Harajuku secret walk</EventTitle>
             </EventHeader>
             <EventDescription>
-              Learn how to make Takoyaki and eat them with fellow travelers. We
-              have three grills and lot of octopus ready!
+              Explore one of the most stylish and exciting parts of Tokyo with
+              local people.
             </EventDescription>{' '}
             <RoundedButton onClick={() => toggleDownloadModal()}>
               Reserve a spot
