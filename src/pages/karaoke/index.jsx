@@ -30,14 +30,10 @@ const PRICES = [
 ]
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 60% 40%;
-  grid-column-gap: 50px;
-  margin-top: 120px;
+  max-width: 960px;
+  margin: 60px auto 0;
   ${smallerScreen} {
-    grid-template-columns: 1fr;
-    padding: 0 20px;
-    margin-top: 40px;
+    margin: 0 10px;
   }
 `
 
@@ -66,10 +62,19 @@ const Paragraph = styled.p`
   line-height: 29px;
 `
 
+const Deal = styled.div`
+  border: 1px solid #dedede;
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 6px;
+  ${smallerScreen} {
+    padding: 10px;
+  }
+`
+
 const SecondaryTitle = styled.h2`
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.96);
-  margin-top: 50px;
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: 500;
 `
 
@@ -96,7 +101,21 @@ const KaraokePage = () => {
           }
         }
       }
-      grid2: file(relativePath: { eq: "karaoke_2.png" }) {
+      KaraokeSteffie: file(relativePath: { eq: "KaraokeSteffie.jpg" }) {
+        childImageSharp {
+          fluid(maxHeight: 1200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      coupon: file(relativePath: { eq: "coupon.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      coupon_extend: file(relativePath: { eq: "coupon_extend.png" }) {
         childImageSharp {
           fluid(maxHeight: 500) {
             ...GatsbyImageSharpFluid
@@ -125,15 +144,46 @@ const KaraokePage = () => {
               beloved activity number one. One can also order food and drinks in
               most karaoke places and spend a good time together.
             </Paragraph>
+            <KaraokeImage src={data.KaraokeSteffie.childImageSharp.fluid.src} />
 
-            <SecondaryTitle>Average prices across japan</SecondaryTitle>
+            <br />
+            <br />
+            <SecondaryTitle>Karaoke deal from Travelr.me</SecondaryTitle>
+
             <Paragraph>
-              The average price is usually calculated in 30-minute blocks and is
-              approximately 100-200 yen per 30 minutes on weekdays, 400-500 yen
-              on weekends and 1,500-2,500 yen for most popular times. (Usually
-              between 11 pm and 5 am)
+              Show this screen at the reception to get this special deal at
+              Karaokekan Shibuya.
+              <br />
+              <strong>Karaokekan Shibuya Bunkamura Dori Branch</strong> <br />
+              カラオケ館 渋谷文化村通り店 2−25−11 Dogenzaka, Shibuya City, Tokyo
+              (Across from H&M )
+              <br />
+              <a href="https://goo.gl/maps/UT3D6FjNqT4B6cGP6" target="_blank">
+                Google Map
+              </a>
+              <br />
+              *This deal is only applicable at Karaokekan Shibuya location at
+              the moment.
             </Paragraph>
 
+            <Deal>
+              <SecondaryTitle>Karaoke special deal</SecondaryTitle>
+              <KaraokeImage src={data.coupon.childImageSharp.fluid.src} />
+            </Deal>
+
+            <Deal>
+              <SecondaryTitle>If you like to EXTEND (encho)</SecondaryTitle>
+              <Paragraph>
+                Price for 2H (above) /4 ＝ Price for 30 mins <br />
+                E.g. it is a Monday and you started from 7pm, extended for 30
+                mins (until 9:30pm) ¥2,500/4 = ¥625 (per 30mins) ¥2,500+¥625=
+                ¥3,125 (your total)
+              </Paragraph>
+
+              <KaraokeImage
+                src={data.coupon_extend.childImageSharp.fluid.src}
+              />
+            </Deal>
             {/*         <PlacesWrap>
               {PRICES.map(place => (
                 <Place>
@@ -144,12 +194,12 @@ const KaraokePage = () => {
             </PlacesWrap> */}
           </KaraokeBody>
 
-          <div>
+          {/*         <div>
             <KaraokeImage src={data.grid1.childImageSharp.fluid.src} />
             <ImageLabel>Typical karaoke room</ImageLabel>
             <KaraokeImage src={data.grid2.childImageSharp.fluid.src} />
             <ImageLabel>Popular karaoke chain in Shibuya</ImageLabel>
-          </div>
+          </div> */}
         </Grid>
       </BodyWrap>
 
