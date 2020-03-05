@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 import { BodyWrap } from '../helpers/common'
 import styled from 'styled-components'
