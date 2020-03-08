@@ -14,9 +14,7 @@ Here’s the list of the 10 best meetup groups to make the most of your time in 
 
 ## 10 Best Meetup Groups in Japan: Our Picks!
 
-> **1.**[**Welcome Tokyo**](https://www.meetup.com/Welcome-Tokyo/) **\|** [**Tokyo Hang Outers**](https://www.meetup.com/Tokyo-hungouters-Meetup/events/)
->
-> - - -
+1. [**Welcome Tokyo**](https://www.meetup.com/Welcome-Tokyo/) **\|** [**Tokyo Hang Outers**](https://www.meetup.com/Tokyo-hungouters-Meetup/events/)
 
 If you know a bit of Japanese language and are willing to improve your Japanese or do not mind speaking English with those who are learning, Welcome Tokyo and Tokyo Hang Outers is for you. They host a lot of language exchange events almost every day across the city and travellers seeking to learn the language is very much welcome! 
 
