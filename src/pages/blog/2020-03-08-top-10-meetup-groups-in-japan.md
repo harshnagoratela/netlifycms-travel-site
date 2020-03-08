@@ -30,6 +30,8 @@ Activities: Karaoke Nights / Izakaya / All You Can Drink \
 Time: Weekly\
 Location: Shibuya
 
+![](/img/img_0393.jpg)
+
 3. [**Japan international Meetup**](https://www.meetup.com/Japan-International-Meetup/) **\|** [**The International Meetup - Cotowa** ](https://www.meetup.com/Cotowa-Social-Events-Activities-Tokyo/)
 
 Day trip is surely a great way to explore the country and in Japan, you’ll never run out of day trips wherever you are. These apps offer intriguing experiences often included in most travellers’ bucket lists, such as Kawagoe walk and onsen trip to the outside of Tokyo. 
