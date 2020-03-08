@@ -6,7 +6,7 @@ description: description
 featuredpost: true
 featuredimage: /img/grid_2.png
 tags:
-  - meetup
+  - Travelr news
 ---
 Whether you are a solo traveler or visiting with your friends, Meetup is one of the best apps you can use to join local communities and experience Japanese culture while traveling. Be it for exciting food trips or unique cultural adventures, there’s always a group for you. 
 
