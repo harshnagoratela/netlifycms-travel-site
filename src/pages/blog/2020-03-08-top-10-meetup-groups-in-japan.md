@@ -14,7 +14,7 @@ Here’s the list of the 10 best meetup groups to make the most of your time in 
 
 ## 10 Best Meetup Groups in Japan: Our Picks!
 
-1. [**Welcome Tokyo**](https://www.meetup.com/Welcome-Tokyo/) **\|** [**Tokyo Hang Outers**](https://www.meetup.com/Tokyo-hungouters-Meetup/events/)
+**1.** [**Welcome Tokyo**](https://www.meetup.com/Welcome-Tokyo/) **\|** [**Tokyo Hang Outers**](https://www.meetup.com/Tokyo-hungouters-Meetup/events/)****
 
 If you know a bit of Japanese language and are willing to improve your Japanese or do not mind speaking English with those who are learning, Welcome Tokyo and Tokyo Hang Outers is for you. They host a lot of language exchange events almost every day across the city and travellers seeking to learn the language is very much welcome! 
 
@@ -22,7 +22,7 @@ Activities: Language Exchange\
 Time: Every Day\
 Location: Shibuya / Harajuku / Kanda / Takadanobaba 
 
-2. [**Japan Solo Travelers**](https://www.meetup.com/Japan-Solo-Travelers/)
+**2.** [**Japan Solo Travelers**](https://www.meetup.com/Japan-Solo-Travelers/) **by Travelr**
 
 Traveling solo? Japan Solo Travelers is a meetup group that supports all solo travelers in Japan. Join their weekly Karaoke night at the heart of Tokyo, Shibuya to meet new people, explore the city, and share tips! Most people join the event by themselves, have awesome fun, then make great friends by the end of the night!      
 
@@ -32,7 +32,7 @@ Location: Shibuya
 
 ![](/img/img_0393.jpg)
 
-3. [**Japan international Meetup**](https://www.meetup.com/Japan-International-Meetup/) **\|** [**The International Meetup - Cotowa** ](https://www.meetup.com/Cotowa-Social-Events-Activities-Tokyo/)
+**3.** [**Japan international Meetup**](https://www.meetup.com/Japan-International-Meetup/) **\|** [**The International Meetup - Cotowa** ](https://www.meetup.com/Cotowa-Social-Events-Activities-Tokyo/)****
 
 Day trip is surely a great way to explore the country and in Japan, you’ll never run out of day trips wherever you are. These apps offer intriguing experiences often included in most travellers’ bucket lists, such as Kawagoe walk and onsen trip to the outside of Tokyo. 
 
