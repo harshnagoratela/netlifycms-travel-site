@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
@@ -91,9 +91,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  tags,
-  title,
-  helmet,
+  title
 }) => {
   const PostContent = contentComponent || Content
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
@@ -114,13 +112,13 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
           </div>
           <div>
-            <Topics>
+            {/*         <Topics>
               <h3>Topics</h3>
               <TopicWrap>
                 <SingleTopic>Solo travels</SingleTopic>
                 <SingleTopic>Trekking</SingleTopic>
               </TopicWrap>
-            </Topics>
+            </Topics> */}
             <div>{!isMobile && <DesktopBanner />}</div>
           </div>
         </BlogBody>

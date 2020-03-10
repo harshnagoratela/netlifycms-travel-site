@@ -115,7 +115,7 @@ const Navbar = () => {
           </Link>
           <MenuWrapper>
             {MENU_ITEMS.map(item => (
-              <NavbarLink to={item.link}>{item.name}</NavbarLink>
+              <NavbarLink to={item.link} key={item.link}>{item.name}</NavbarLink>
             ))}
           </MenuWrapper>
 
@@ -131,8 +131,8 @@ const Navbar = () => {
 
       <MobileNavigationProps open={open}>
         {MENU_ITEMS.map(item => (
-          <Link to={item.link}>
-            <a>{item.name}</a>
+          <Link to={item.link} key={item.link}>
+            {item.name}
           </Link>
         ))}
       </MobileNavigationProps>

@@ -9,7 +9,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div>
-        {posts && posts.map(({ node: post }) => <SingleArticle post={post} />)}
+        {posts && posts.map(({ node: post }) => <SingleArticle key={post.id} post={post} />)}
       </div>
     )
   }

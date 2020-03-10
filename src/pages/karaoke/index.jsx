@@ -148,7 +148,7 @@ const KaraokePage = () => {
 
             <br />
             <br />
-            <SecondaryTitle>Karaoke deal from Travelr.me</SecondaryTitle>
+            <SecondaryTitle>Karaoke deals from Travelr.me</SecondaryTitle>
 
             <Paragraph>
               Show this screen at the reception to get this special deal at
@@ -167,7 +167,7 @@ const KaraokePage = () => {
             </Paragraph>
 
             <Deal>
-              <SecondaryTitle>Karaoke special deal</SecondaryTitle>
+              <SecondaryTitle>2 hours karaoke + all you can drink</SecondaryTitle>
               <KaraokeImage src={data.coupon.childImageSharp.fluid.src} />
             </Deal>
 

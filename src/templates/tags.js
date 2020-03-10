@@ -27,7 +27,9 @@ class TagRoute extends React.Component {
           <BlogBody>
             <div>
               {posts &&
-                posts.map(({ node: post }) => <SingleArticle post={post} />)}
+                posts.map(({ node: post }) => (
+                  <SingleArticle post={post} key={post.id} />
+                ))}
             </div>
 
             <div>

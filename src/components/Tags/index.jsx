@@ -68,7 +68,7 @@ const Tags = ({ activeTag }) => {
             const tagPath = `/tags/${_.kebabCase(tag.fieldValue)}/`
 
             return (
-              <SingleTopic to={tagPath} active={activeTag === tag.fieldValue}>
+              <SingleTopic to={tagPath} key={tagPath} active={activeTag === tag.fieldValue}>
                 {tag.fieldValue}
               </SingleTopic>
             )
