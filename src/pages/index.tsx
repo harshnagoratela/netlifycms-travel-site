@@ -93,7 +93,7 @@ const IndexPage = ({ intl }) => {
               Life’s better with people—and now there’s a new way to meet them
               with local events and new app that made them possible. Every
               experience is selected and created by local people, so you can
-              connect with othes easier than before.
+              connect with others easier than before.
             </TextIntroductionText>
           </IntroductionFlex>
         </TextIntroduction>

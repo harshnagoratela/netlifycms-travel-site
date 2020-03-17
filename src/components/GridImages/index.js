@@ -81,7 +81,7 @@ const GridImages = () => {
       <Grid>
         <GridBlock>
           <Title>Hang out</Title>
-          <Subtitle>Be spontaneous and jump into hang outs happing near you right now, like right now.</Subtitle>
+          <Subtitle>Be spontaneous and jump into hang outs happening near you right now, like right now.</Subtitle>
           <Image src={data.grid1.childImageSharp.fluid.src} />
         </GridBlock>
         <GridBlock>
