@@ -2,7 +2,7 @@
 templateKey: about-page
 title: About TRAVELR
 ---
-## At TRAVELR, we empower people to discover the joy of solo travel and explore the world with no fear. 
+## At TRAVELR, we empower people to discover the joy of solo travel and explore the world with no fear.
 
 It is a big, big world and there is an endless list of places to see, foods to eat, and wonderful people to meet—it is such a shame that many miss out on new experiences because they fear to be a “stranger in a strange land”. We want to help everyone feel that they “belong anywhere” and find a community they will feel at home wherever they may be. 
 
@@ -12,7 +12,7 @@ Although we are currently focusing on the Japanese market solely to create high-
 
 With TRAVELR, we hope you’ll travel more freely and frequently, be it solo or with friends.
 
-
+![](/img/solo-travel.jpg)
 
 ### Traveling solo—where it all started
 
@@ -22,15 +22,11 @@ According to her, traveling is “one of the most important self-investments one
 
 Traveling solo allows you to travel where you want, whenever you want. 
 
-
-
 ### Challenges of solo traveling
 
 Solo travel offers an array of incredible experiences and unforgettable memories, but it has its downsides too. It can be very intimidating and isolating, especially in the cases of female travelers where there can be many instances of feeling unsafe when alone.
 
 Solo travel can certainly be more enjoyable and accessible to travelers if there was an easier way to meet people and join in on the adventure. Sure, exploring cities or relaxing at the beach by yourself might be fun, but some activities are way more enjoyable when done with others, such as food-tripping or going to a theme park. 
-
-
 
 ### TRAVELR: the answer to your solo-travel problems!
 
