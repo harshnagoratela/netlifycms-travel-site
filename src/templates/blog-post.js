@@ -91,7 +91,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
-  title
+  title,
 }) => {
   const PostContent = contentComponent || Content
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
