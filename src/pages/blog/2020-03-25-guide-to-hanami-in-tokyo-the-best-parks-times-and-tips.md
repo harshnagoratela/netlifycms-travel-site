@@ -128,6 +128,4 @@ Writtten by: Jessie Carbutt
 
 Originally from the UK, Jess lives, works and writes in Japan. A lover of exploring and anything creative, she's always discovering new things in her Tokyo home. 
 
-
-
 ![](/img/jess-carbutt-profile-circle.png)
