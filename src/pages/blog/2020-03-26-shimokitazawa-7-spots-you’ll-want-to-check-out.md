@@ -4,7 +4,7 @@ title: 'Shimokitazawa: 7 Spots You’ll Want to Check Out'
 date: 2020-03-26T03:01:48.733Z
 description: 'Shimokitazawa: 7 Spots You’ll Want to Check Out'
 featuredpost: true
-featuredimage: /img/16082626943_cfa4708f9a_c.jpg
+featuredimage: /img/shimokitazawa.jpg
 tags:
   - Explore
 ---
