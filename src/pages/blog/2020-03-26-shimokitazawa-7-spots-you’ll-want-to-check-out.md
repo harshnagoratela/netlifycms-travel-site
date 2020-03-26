@@ -16,6 +16,3 @@ Nasu Oyaji (ナス親父) is one of the oldest curry restaurants in Shimokitazaw
 
 https://www.instagram.com/p/B8D8j1aBVCI/
 
-```
-https://www.instagram.com/p/B8D8j1aBVCI/
-```
