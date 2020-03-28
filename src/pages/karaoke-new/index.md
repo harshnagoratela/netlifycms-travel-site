@@ -15,14 +15,19 @@ karaokebody:
   secondarytitle: Karaoke deals from Travelr.me
   secondarypara: >-
     Show this screen at the reception to get this special deal at Karaokekan
-    Shibuya.\
+    Shibuya.
 
-    **Karaokekan Shibuya Bunkamura Dori Branch**\
 
-    カラオケ館 渋谷文化村通り店 2−25−11 Dogenzaka, Shibuya City, Tokyo (Across from H&M )\
+    **Karaokekan Shibuya Bunkamura Dori Branch**
 
-    [Google Map](https://goo.gl/maps/UT3D6FjNqT4B6cGP6)*This deal is only
-    applicable at Karaokekan Shibuya location at the moment.
+
+    カラオケ館 渋谷文化村通り店 2−25−11 Dogenzaka, Shibuya City, Tokyo (Across from H&M )
+
+
+    [Google Map](https://goo.gl/maps/UT3D6FjNqT4B6cGP6)
+
+
+    \*This deal is only applicable at Karaokekan Shibuya location at the moment.
 deal:
   - title: 2 hours karaoke + all you can drink
     image: /img/products-grid3.jpg
