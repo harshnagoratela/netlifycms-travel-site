@@ -163,7 +163,7 @@ const RelativeBodyWrap = styled(BodyWrap)`
   position: relative;
 `
 
-const Hero = () => {
+const Hero = (props: any) => {
   const { toggleDownloadModal } = useContext(WebContext)
 
   const data = useStaticQuery(graphql`
@@ -191,20 +191,17 @@ const Hero = () => {
         <Navbar />
         <RelativeBodyWrap>
           <IntroFlex>
-            <MainTitle fontSize={5}>Traveling in Japan?</MainTitle>
+            <MainTitle fontSize={5}>{props.title}</MainTitle>
             <Typist cursor={{ show: false }} avgTypingDelay={100}>
               <MainTitle fontSize={5}>
-                <span>Travel better...</span>
-                <Typist.Backspace count={9} delay={1500} />
-                <span>and explore...</span>
-                <Typist.Backspace count={14} delay={1500} />
-                <span>social!</span>
+                <span>Travel solo.</span>
+                <Typist.Backspace count={5} delay={1500} />
+                <span>social.</span>
+                <Typist.Backspace count={7} delay={1500} />
+                <span>local.</span>
               </MainTitle>
             </Typist>
-            <Subtitle>
-              Karaoke, secret walks & ramen... hang out locals & travelers in
-              Japan
-            </Subtitle>
+            <Subtitle>{props.subtitle}</Subtitle>
             <DownloadButton onClick={() => toggleDownloadModal()}>
               Find events & hang out
             </DownloadButton>

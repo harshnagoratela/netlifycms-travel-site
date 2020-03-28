@@ -93,8 +93,6 @@ const KaraokeBody = styled.div``
 const KaraokePage = ({ data }) => {
   const { markdownRemark: post } = data
 
-  console.log(post)
-
   return (
     <Layout>
       <SEO title={`Karaoke in Japan | Travelr app`} />
@@ -153,7 +151,7 @@ query KaraokePage($id: String!) {
         body
         image {
           childImageSharp {
-            fluid {
+            fluid(maxHeight: 1200) {
               ...GatsbyImageSharpFluid
             }
           }

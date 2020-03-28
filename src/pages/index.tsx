@@ -1,5 +1,4 @@
 import React from 'react'
-// import { injectIntl } from "gatsby-plugin-intl"
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -62,23 +61,15 @@ const TextIntroductionText = styled.p`
   line-height: 29px;
 `
 
-const IndexPage = ({ intl }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      app: file(relativePath: { eq: "app.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const IndexPage = ({ data }) => {
+
+  const homedata = data.markdownRemark.frontmatter;
+  console.log(data);
 
   return (
     <Layout>
       <SEO title="Share and experience Japan together | Travelr app" />
-      <Hero />
+      <Hero title={homedata.title} subtitle={homedata.subtitle} />
       <GridImages />
       <BodyWrap>
         <TextIntroduction>
@@ -98,7 +89,7 @@ const IndexPage = ({ intl }) => {
           </IntroductionFlex>
         </TextIntroduction>
       </BodyWrap>
-      <UpcomingEvents />
+      <UpcomingEvents events={homedata.upcomingEvents} />
       <StoryBox />
       <LandingPageArticles />
       <CtaBanner />
@@ -107,3 +98,36 @@ const IndexPage = ({ intl }) => {
 }
 
 export default IndexPage
+
+export const landingPageQuery = graphql`
+	query LandingPage {
+	  markdownRemark(frontmatter: {templateKey: {eq: "landing-page"}}) {
+      frontmatter {
+        title
+        subtitle
+        upcomingEvents {
+          title
+          subtitle
+          event {
+            title
+            body
+            image {
+              childImageSharp {
+                fluid(maxHeight: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+	  }
+	  app: file(relativePath: { eq: "app.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+	}
+`
