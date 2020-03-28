@@ -106,7 +106,7 @@ const KaraokePage = ({ data }) => {
         <Grid>
           <KaraokeBody>
             <h1>{post.frontmatter.karaokebody.primarytitle}</h1>
-            <Paragraph>{post.frontmatter.karaokebody.primarypara}</Paragraph>
+            <Paragraph><RenderMarkdownAsHTML content={post.frontmatter.karaokebody.primarypara} /></Paragraph>
             <KaraokeImage src={post.frontmatter.karaokebody.image.childImageSharp.fluid.src} />
             <br />
             <br />
@@ -115,7 +115,7 @@ const KaraokePage = ({ data }) => {
             {post.frontmatter.deal && post.frontmatter.deal.map((item) => (
               <Deal>
                 <SecondaryTitle>{item.title}</SecondaryTitle>
-                <Paragraph>{item.body}</Paragraph>
+                <Paragraph><RenderMarkdownAsHTML content={item.body} /></Paragraph>
                 <KaraokeImage src={item.image.childImageSharp.fluid.src} />
               </Deal>
             ))}
