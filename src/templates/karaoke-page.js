@@ -19,7 +19,7 @@ const PostTitle = styled.h1`
   margin-top: 10px;
 `
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const KaraokePageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -36,12 +36,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-const AboutPage = ({ data }) => {
+const KaraokePage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <KaraokePageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -50,10 +50,10 @@ const AboutPage = ({ data }) => {
   )
 }
 
-export default AboutPage
+export default KaraokePage
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const karaokePageQuery = graphql`
+  query KaraokePage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
