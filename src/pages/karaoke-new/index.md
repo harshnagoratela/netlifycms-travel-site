@@ -32,10 +32,13 @@ deal:
   - title: 2 hours karaoke + all you can drink
     image: /img/products-grid3.jpg
   - title: If you like to EXTEND (encho)
-    body: |-
-      Price for 2H (above) /4 ＝ Price for 30 mins \
-      E.g. it is a Monday and you started from 7pm, extended for 30
-      mins (until 9:30pm) ¥2,500/4 = ¥625 (per 30mins) ¥2,500+¥625=
+    body: >-
+      Price for 2H (above) /4 ＝ Price for 30 mins 
+
+
+      E.g. it is a Monday and you started from 7pm, extended for 30 mins (until
+      9:30pm) ¥2,500/4 = ¥625 (per 30mins) ¥2,500+¥625=
+
       ¥3,125 (your total)
     image: /img/products-grid1.jpg
 ---
