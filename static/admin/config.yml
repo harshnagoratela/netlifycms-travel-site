@@ -53,9 +53,9 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/karaoke-new/index.md"
+      - file: "src/pages/karaoke/index.md"
         label: "Karaoke"
-        name: "karaoke-new"
+        name: "karaoke"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "karaoke-page"}
           - {label: "Title", name: "title", widget: "string"}
