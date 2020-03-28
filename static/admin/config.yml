@@ -71,7 +71,7 @@ collections:
             widget: "list"
             fields:
             - {label: "Title", name: "title", widget: "string"}
-            - {label: "Body", name: "body", widget: "markdown"}
+            - {label: "Body", name: "body", widget: "markdown", required: false}
             - {label: "Image", name: "image", widget: "image", required: false}
       - file: "src/pages/terms/index.md"
         label: "Terms and Privacy"
