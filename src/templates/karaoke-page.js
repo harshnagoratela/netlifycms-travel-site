@@ -51,11 +51,11 @@ const PlacesWrap = styled.div`
   }
 `
 
-const Paragraph = styled.p`
+const Paragraph = styled.div`
   font-size: 17px;
   color: rgba(0, 0, 0, 0.66);
   line-height: 29px;
-  p{
+  p {
     margin: 0px;
   }
 `
