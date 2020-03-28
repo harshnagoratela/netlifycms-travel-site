@@ -9,7 +9,7 @@ const RenderMarkdownAsHTML = ({ content, className }) => {
     .toString()
 
   return (
-    <span className={className} dangerouslySetInnerHTML={{ __html: content }} />
+    <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
   )
 }
 
