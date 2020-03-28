@@ -12,15 +12,15 @@ upcomingEvents:
       body: >-
         Karaoke is Japan's most beloved social activity. Join us and dind out
         why!
-      image: /img/flavor_wheel.jpg
+      image: /img/karaoke.jpg
     - title: Sake testing
       body: >-
         Fully experience the traditional Japanese drink, try many types of Sake
         and find your favorite!
-      image: /img/products-grid2.jpg
+      image: /img/sake_tasting.jpg
     - title: Harajuku secret walk
       body: >-
         Explore one of the most stylish and exciting parts of Tokyo with local
         people.
-      image: /img/products-grid3.jpg
+      image: /img/harajuku_secret_walk.jpg
 ---
