@@ -34,10 +34,11 @@ collections:
       - file: "src/pages/index.md"
         label: "Home page"
         create: false
-        name: "landing"
+        name: "homepage"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Sub Title", name: "subtitle", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
           - label: "Events"
             name: "upcomingEvents"

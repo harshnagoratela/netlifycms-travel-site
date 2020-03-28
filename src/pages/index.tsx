@@ -1,5 +1,4 @@
 import React from 'react'
-// import { injectIntl } from "gatsby-plugin-intl"
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -62,18 +61,9 @@ const TextIntroductionText = styled.p`
   line-height: 29px;
 `
 
-const IndexPage = ({ intl }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      app: file(relativePath: { eq: "app.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const IndexPage = ({ data }) => {
+
+  console.log(data);
 
   return (
     <Layout>
@@ -107,3 +97,20 @@ const IndexPage = ({ intl }) => {
 }
 
 export default IndexPage
+
+export const landingPageQuery = graphql`
+	query LandingPage {
+	  markdownRemark(frontmatter: {templateKey: {eq: "landing-page"}}) {
+		frontmatter {
+		  title
+		}
+	  }
+	  app: file(relativePath: { eq: "app.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+	}
+`
