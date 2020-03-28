@@ -63,12 +63,13 @@ const TextIntroductionText = styled.p`
 
 const IndexPage = ({ data }) => {
 
+  const homedata = data.markdownRemark.frontmatter;
   console.log(data);
 
   return (
     <Layout>
       <SEO title="Share and experience Japan together | Travelr app" />
-      <Hero />
+      <Hero title={homedata.title} subtitle={homedata.subtitle} />
       <GridImages />
       <BodyWrap>
         <TextIntroduction>
@@ -88,7 +89,7 @@ const IndexPage = ({ data }) => {
           </IntroductionFlex>
         </TextIntroduction>
       </BodyWrap>
-      <UpcomingEvents />
+      <UpcomingEvents events={homedata.upcomingEvents} />
       <StoryBox />
       <LandingPageArticles />
       <CtaBanner />
@@ -101,16 +102,32 @@ export default IndexPage
 export const landingPageQuery = graphql`
 	query LandingPage {
 	  markdownRemark(frontmatter: {templateKey: {eq: "landing-page"}}) {
-		frontmatter {
-		  title
-		}
-	  }
-	  app: file(relativePath: { eq: "app.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+      frontmatter {
+        title
+        subtitle
+        upcomingEvents {
+          title
+          subtitle
+          event {
+            title
+            body
+            image {
+              childImageSharp {
+                fluid(maxHeight: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
+	  }
+	  app: file(relativePath: { eq: "app.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
 	}
 `

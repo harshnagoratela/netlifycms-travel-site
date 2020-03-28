@@ -151,7 +151,7 @@ query KaraokePage($id: String!) {
         body
         image {
           childImageSharp {
-            fluid {
+            fluid(maxHeight: 1200) {
               ...GatsbyImageSharpFluid
             }
           }

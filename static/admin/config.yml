@@ -39,11 +39,13 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "landing-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Sub Title", name: "subtitle", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-          - label: "Events"
+          - label: "Upcoming Events"
             name: "upcomingEvents"
-            widget: "list"
-            field: {image: Image, name: "string", description: "text"}
+            widget: "object"
+            fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Sub Title", name: "subtitle", widget: "string", required: false}
+            - {label: "Event", name: "event", widget: list, fields: [{label: "Title", name: "title", widget: "string"}, {label: "Description", name: "body", widget: "markdown", required: false}, {label: "Image", name: "image", widget: "image", required: false}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

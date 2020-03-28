@@ -93,7 +93,7 @@ const MobileCarousel = styled(Carousel)`
   }
 `
 
-const UpcomingEvents = () => {
+const UpcomingEvents = (props: any) => {
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
   const { toggleDownloadModal } = useContext(WebContext)
 
@@ -126,11 +126,8 @@ const UpcomingEvents = () => {
   if (isMobile) {
     return (
       <UpcomingWrap>
-        <Title>Upcoming events</Title>
-        <Text color="textGrey" fontSize={1} mb="40px" textAlign="center">
-          You don’t need to pay for a guide to have fun in Japan. Meet great
-          friends on TRAVELR and hang out now.
-        </Text>
+        <Title>{props.events.title}</Title>
+        <Text color="textGrey" fontSize={1} mb="40px" textAlign="center">{props.events.subtitle}</Text>
         <MobileCarousel
           showThumbs={false}
           infiniteLoop
@@ -139,42 +136,17 @@ const UpcomingEvents = () => {
           showArrows={true}
           showStatus={false}
         >
-          <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Karaoke</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Karaoke is Japan's most beloved social activity. Join us and dind
-              out why!
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
+          {props.events.event && props.events.event.map((item) =>
+            <Event>
+              <EventHeader background={item.image.childImageSharp.fluid.src}>
+                <EventTitle>{item.title}</EventTitle>
+              </EventHeader>
+              <EventDescription>{item.body}</EventDescription>{' '}
+              <RoundedButton onClick={() => toggleDownloadModal()}>
+                Reserve a spot
             </RoundedButton>
-          </Event>
-          <Event>
-            <EventHeader background={data.sake.childImageSharp.fluid.src}>
-              <EventTitle>Sake tasting</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Fully experience the traditional Japanese drink and try many types
-              of Sake. They all taste different. Find your favorite!
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
-            </RoundedButton>
-          </Event>
-          <Event>
-            <EventHeader background={data.harajuku.childImageSharp.fluid.src}>
-              <EventTitle>Harajuku secret walk</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Explore one of the most stylish and exciting parts of Tokyo with
-              local people.
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
-            </RoundedButton>
-          </Event>
+            </Event>
+          )}
         </MobileCarousel>
       </UpcomingWrap>
     )
@@ -183,48 +155,20 @@ const UpcomingEvents = () => {
   return (
     <UpcomingWrap>
       <BodyWrap>
-        <Title>Upcoming events</Title>
-        <Text color="textGrey" fontSize={1} mb="60px" textAlign="center">
-          You don’t need to pay for a guide to have fun in Japan. Meet great
-          friends on TRAVELR and hang out now.
-        </Text>
+        <Title>{props.events.title}</Title>
+        <Text color="textGrey" fontSize={1} mb="60px" textAlign="center">{props.events.subtitle}</Text>
         <Grid>
-          <Event>
-            <EventHeader background={data.karaoke.childImageSharp.fluid.src}>
-              <EventTitle>Karaoke</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Karaoke is Japan's most beloved social activity. Join us and dind
-              out why!
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
+          {props.events.event && props.events.event.map((item) =>
+            <Event>
+              <EventHeader background={item.image.childImageSharp.fluid.src}>
+                <EventTitle>{item.title}</EventTitle>
+              </EventHeader>
+              <EventDescription>{item.body}</EventDescription>{' '}
+              <RoundedButton onClick={() => toggleDownloadModal()}>
+                Reserve a spot
             </RoundedButton>
-          </Event>
-          <Event>
-            <EventHeader background={data.sake.childImageSharp.fluid.src}>
-              <EventTitle>Sake tasting</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Fully experience the traditional Japanese drink, try many types
-              of Sake and find your favorite!
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
-            </RoundedButton>
-          </Event>
-          <Event>
-            <EventHeader background={data.harajuku.childImageSharp.fluid.src}>
-              <EventTitle>Harajuku secret walk</EventTitle>
-            </EventHeader>
-            <EventDescription>
-              Explore one of the most stylish and exciting parts of Tokyo with
-              local people.
-            </EventDescription>{' '}
-            <RoundedButton onClick={() => toggleDownloadModal()}>
-              Reserve a spot
-            </RoundedButton>
-          </Event>
+            </Event>
+          )}
         </Grid>
       </BodyWrap>
     </UpcomingWrap>
