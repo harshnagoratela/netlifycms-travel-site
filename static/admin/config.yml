@@ -50,6 +50,29 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+      - file: "src/pages/karaoke-new/index.md"
+        label: "Karaoke"
+        name: "karaoke-new"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "karaoke-page"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Sub-Title", name: "subtitle", widget: "string"}
+          - label: "Karaoke Body" 
+            name: "karaokebody"
+            widget: "object"
+            fields:
+            - {label: "Primary Title", name: "primarytitle", widget: "string"}
+            - {label: "Primary Paragraph", name: "primarypara", widget: "markdown"}
+            - {label: "Image", name: "image", widget: "image", required: false}
+            - {label: "Secondary Title", name: "secondarytitle", widget: "string"}
+            - {label: "Secondary Paragraph", name: "secondarypara", widget: "markdown"}
+          - label: "Deals"
+            name: "deal"
+            widget: "list"
+            fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Body", name: "body", widget: "markdown"}
+            - {label: "Image", name: "image", widget: "image", required: false}
       - file: "src/pages/terms/index.md"
         label: "Terms and Privacy"
         name: "terms"
@@ -60,13 +83,6 @@ collections:
       - file: "src/pages/contact/index.md"
         label: "Contact"
         name: "contact"
-        fields:
-          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-      - file: "src/pages/karaoke/index.md"
-        label: "Karaoke"
-        name: "karaoke"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}

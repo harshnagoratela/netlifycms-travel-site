@@ -1,4 +1,5 @@
 ---
+templateKey: karaoke-page
 title: Karaoke
 subtitle: ' Get discounts for Japan most beloved social activity'
 karaokebody:
