@@ -40,21 +40,23 @@ const Col = styled.div`
     }
 `
 
-const ContactPage = ({ data: { page } }) => {
+const ContactPage = ({ data }) => {
 
     return (
         <Layout>
             <SEO title={`Contact Us | Travelr app`} />
-            <PageHeader title="Contact" />
+            <PageHeader title={data.markdownRemark.frontmatter.title} />
             <BodyWrap>
                 <PageBody>
                     <Row>
-                    <Col>
-                        <h2>Heading 2</h2>
-                    </Col>
-                    <Col>
-                        <ContactForm />
-                    </Col>
+                        <Col>
+                            <div 
+                                dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+                            />
+                        </Col>
+                        <Col>
+                            <ContactForm />
+                        </Col>
                     </Row>
                 </PageBody>
             </BodyWrap>
