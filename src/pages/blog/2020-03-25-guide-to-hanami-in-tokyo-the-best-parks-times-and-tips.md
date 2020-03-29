@@ -5,12 +5,19 @@ date: 2020-03-24T14:46:40.766Z
 description: See COVID-19 Note for each park below
 featuredpost: true
 featuredimage: /img/sakura-shutterstock_1029669343-copy.jpg
+author:
+  name: 'Writtten by: Jessie Carbutt'
+  bio: >-
+    Originally from the UK, Jess lives, works and writes in Japan. A lover of
+    exploring and anything creative, she's always discovering new things in her
+    Tokyo home.
+  image: /img/jess-carbutt-profile-circle.png
 tags:
   - Sakura
   - Tokyo
   - Nature
 ---
-## What is _Hanami_?
+## What is *Hanami*?
 
 Lucky enough to be visiting Tokyo when the sakura (cherry blossom) is in bloom around the end of March and start of April? At this time of year, local parks across Tokyo transform into buzzing hubs as friends, families, couples and colleagues enjoy the traditional custom of hanami (sakura viewing). With its short life-span, cherry blossom has become a symbol of the transient beauty of nature in Japan, and appreciating this during hanami involves picnicking beneath the cherry trees, relaxing and enjoying the falling blossoms. 
 
@@ -123,9 +130,3 @@ COVID-19 Note: Asukayama Park will be open as usual, but the usual festival lant
 Extra Tip: If you don’t want to picnic and just want to view some super photogenic sakura (possibly snapping some pictures for your Instagram in the process), head to Meguro River, Sumida River or Aoyama Cemetery. 
 
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-Writtten by: Jessie Carbutt
-
-Originally from the UK, Jess lives, works and writes in Japan. A lover of exploring and anything creative, she's always discovering new things in her Tokyo home. 
-
-![](/img/jess-carbutt-profile-circle.png)
