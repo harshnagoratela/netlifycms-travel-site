@@ -89,8 +89,4 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "contact-page"}
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Sub Title", name: "subtitle", widget: "string", required: false}
           - {label: "Body", name: "body", widget: "markdown", required: false}
-          - { label: "Address", name: "address", widget: "text", required: false }
-          - { label: "Phone", name: "phone", widget: "string", required: false }
-          - { label: "Email Address", name: "email", widget: "string", required: false }
