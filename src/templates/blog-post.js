@@ -40,6 +40,16 @@ const BlogBody = styled.div`
   }
 `
 
+const Author = styled.div`
+h5 {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+}
+`
+
 const Topics = styled.div`
   margin-top: 40px;
   margin-bottom: 40px;
@@ -91,6 +101,7 @@ export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
+  author,
   title,
 }) => {
   const PostContent = contentComponent || Content
@@ -110,6 +121,11 @@ export const BlogPostTemplate = ({
             <PostTitle>{title}</PostTitle>
             <p>{description}</p>
             <PostContent content={content} />
+            <Author>
+              <h5>{(author && author.name) ? author.name : ""}</h5>
+              <p>{(author && author.bio) ? author.bio : ""}</p>
+              <img src={(author && author.image) ? author.image.childImageSharp.fluid.src : ""} />
+            </Author>
           </div>
           <div>
             {/*         <Topics>
@@ -174,6 +190,7 @@ const BlogPost = ({ data }) => {
         </Helmet>
       }
       tags={post.frontmatter.tags}
+      author={post.frontmatter.author}
       title={post.frontmatter.title}
     />
   )
@@ -190,6 +207,17 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        author {
+          name
+          bio
+          image{
+            childImageSharp {
+              fluid(maxHeight: 150) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
         tags
       }
     }
