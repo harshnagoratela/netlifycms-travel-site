@@ -1,5 +1,5 @@
 ---
-templateKey: about-page
+templateKey: contact-page
 path: /contact
 title: Contact Us
 subtitle: subtitle-text
