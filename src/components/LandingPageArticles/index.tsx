@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { Link, graphql, StaticQuery } from 'gatsby'
 import SingleArticle from '../SingleArticle'
 import { BodyWrap } from '../../helpers/common'
 import styled from 'styled-components'
@@ -34,6 +34,8 @@ const LandingPageArticles = ({ data }) => {
       <PostWrap>
         {posts && posts.map(({ node: post }) => <SingleArticle post={post} />)}
       </PostWrap>
+
+      <Link to="/blog">More...</Link>
     </BodyWrap>
   )
 }
