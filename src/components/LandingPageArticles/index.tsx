@@ -42,10 +42,10 @@ export default () => (
   <StaticQuery
     query={graphql`
       query LandingPageQuery {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-        ) {
+        allMarkdownRemark(sort: {
+          order: DESC, fields: [frontmatter___date]}, 
+          filter: {frontmatter: {templateKey: {eq: "blog-post"}, featuredpost: {eq: true}}}, 
+          limit: 2) {
           edges {
             node {
               excerpt(pruneLength: 400)
