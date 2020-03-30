@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Top 10 Meetup Groups in Japan
 date: 2020-03-08T09:47:26.220Z
 description: 10 Best Meetup Groups in Japan
-featuredpost: false
+featuredpost: true
 featuredimage: /img/grid_2.png
 tags:
   - Meetup
