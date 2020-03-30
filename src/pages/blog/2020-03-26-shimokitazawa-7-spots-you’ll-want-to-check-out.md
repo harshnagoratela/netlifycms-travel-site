@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 'Shimokitazawa: 7 Spots You’ll Want to Check Out'
 date: 2020-03-26T03:01:48.733Z
 description: 'Shimokitazawa: 7 Spots You’ll Want to Check Out'
-featuredpost: false
+featuredpost: true
 featuredimage: /img/shimokitazawa.jpg
 tags:
   - Explore
