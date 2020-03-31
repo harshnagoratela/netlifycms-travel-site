@@ -212,7 +212,7 @@ export const pageQuery = graphql`
           bio
           image{
             childImageSharp {
-              fluid(maxHeight: 150) {
+              fluid(maxHeight: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
