@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import { Text, RoundedButton } from '../common'
 
 const ArticleWrap = styled.div`
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 `
 
 const Title = styled.h3`
