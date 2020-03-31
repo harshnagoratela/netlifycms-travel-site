@@ -8,7 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
 import { BodyWrap, HeaderBackground } from '../helpers/common'
 import Navbar from '../components/Navbar'
-import { smallerScreen, mediumScreen } from '../helpers/breakpoints'
+import { smallerScreen } from '../helpers/breakpoints'
 import { useMediaQuery } from 'react-responsive'
 import DesktopBanner from '../components/DesktopBanner'
 import SEO from '../components/seo'
@@ -29,9 +29,16 @@ const Subtitle = styled.p`
 `
 
 const BlogBody = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  grid-column-gap: 100px;
   margin-top: 50px;
-  ${mediumScreen} {
-    padding: 0 1rem;
+  ${smallerScreen} {
+    margin-top: 20px;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
 `
 
