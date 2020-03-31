@@ -8,19 +8,17 @@ upcomingEvents:
     You don’t need to pay for a guide to have fun in Japan. Meet great friends
     on TRAVELR and hang out now.
   event:
-    - title: Karaoke
+    - title: Karaoke Night
       body: >-
-        Karaoke is Japan's most beloved social activity. Join us and dind out
+        Karaoke is Japan's most beloved social activity. Join us and find out
         why!
       image: /img/karaoke.jpg
-    - title: Sake testing
-      body: >-
-        Fully experience the traditional Japanese drink, try many types of Sake
-        and find your favorite!
+    - title: Sake Tasting
+      body: Enjoy different flavorful notes of Sake
       image: /img/sake_tasting.jpg
     - title: Harajuku secret walk
       body: >-
-        Explore one of the most stylish and exciting parts of Tokyo with local
-        people.
+        Explore one of the most stylish and exciting parts of Tokyo with new
+        friends
       image: /img/harajuku_secret_walk.jpg
 ---

@@ -101,6 +101,7 @@ const MENU_ITEMS = [
   { name: 'About', link: '/about' },
   { name: 'Karaoke', link: '/karaoke' },
   { name: 'Blog', link: '/blog' },
+  { name: 'Contact', link: '/contact' },
 ]
 
 const Navbar = () => {
