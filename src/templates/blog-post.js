@@ -40,6 +40,15 @@ const BlogBody = styled.div`
     overflow-wrap: break-word;
     word-wrap: break-word;
   }
+
+  .gatsby-resp-image-wrapper, img {
+    max-width: 600px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    ${smallerScreen} {
+      max-width: 100% !important;
+    }
+  }
 `
 
 const Author = styled.div`
