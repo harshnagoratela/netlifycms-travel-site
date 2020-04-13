@@ -75,7 +75,7 @@ const Title = styled.h3`
   margin-bottom: 10px;
 `
 
-const MobileCarousel = styled(Carousel)`
+const MobileCarouselWrapper = styled.div`
   .carousel .slide {
     background: transparent;
   }
@@ -96,58 +96,34 @@ const MobileCarousel = styled(Carousel)`
 const UpcomingEvents = (props: any) => {
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
   const { toggleDownloadModal } = useContext(WebContext)
-
-  const data = useStaticQuery(graphql`
-    query {
-      karaoke: file(relativePath: { eq: "events/karaoke.jpg" }) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      harajuku: file(relativePath: { eq: "events/harajuku_secret_walk.jpg" }) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      sake: file(relativePath: { eq: "events/sake_tasting.jpg" }) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
+  
   if (isMobile) {
     return (
       <UpcomingWrap>
         <Title>{props.events.title}</Title>
         <Text color="textGrey" fontSize={1} mb="40px" textAlign="center">{props.events.subtitle}</Text>
-        <MobileCarousel
-          showThumbs={false}
-          infiniteLoop
-          showIndicators={false}
-          selectedItem={1}
-          showArrows={true}
-          showStatus={false}
-        >
-          {props.events.event && props.events.event.map((item) =>
-            <Event>
-              <EventHeader background={item.image.childImageSharp.fluid.src}>
-                <EventTitle>{item.title}</EventTitle>
-              </EventHeader>
-              <EventDescription>{item.body}</EventDescription>{' '}
-              <RoundedButton onClick={() => toggleDownloadModal()}>
-                Reserve a spot
+        <MobileCarouselWrapper>
+          <Carousel
+            showThumbs={false}
+            infiniteLoop
+            showIndicators={false}
+            selectedItem={1}
+            showArrows={true}
+            showStatus={false}
+          >
+            {props.events.event && props.events.event.map((item) =>
+              <Event>
+                <EventHeader background={item.image.childImageSharp.fluid.src}>
+                  <EventTitle>{item.title}</EventTitle>
+                </EventHeader>
+                <EventDescription>{item.body}</EventDescription>{' '}
+                <RoundedButton onClick={() => toggleDownloadModal()}>
+                  Reserve a spot
             </RoundedButton>
-            </Event>
-          )}
-        </MobileCarousel>
+              </Event>
+            )}
+          </Carousel>
+        </MobileCarouselWrapper>
       </UpcomingWrap>
     )
   }
