@@ -128,6 +128,26 @@ const UpcomingEvents = (props: any) => {
       <UpcomingWrap>
         <Title>{props.events.title}</Title>
         <Text color="textGrey" fontSize={1} mb="40px" textAlign="center">{props.events.subtitle}</Text>
+        <MobileCarousel
+          showThumbs={false}
+          infiniteLoop
+          showIndicators={false}
+          selectedItem={1}
+          showArrows={true}
+          showStatus={false}
+        >
+          {props.events.event && props.events.event.map((item) =>
+            <Event>
+              <EventHeader background={item.image.childImageSharp.fluid.src}>
+                <EventTitle>{item.title}</EventTitle>
+              </EventHeader>
+              <EventDescription>{item.body}</EventDescription>{' '}
+              <RoundedButton onClick={() => toggleDownloadModal()}>
+                Reserve a spot
+            </RoundedButton>
+            </Event>
+          )}
+        </MobileCarousel>
       </UpcomingWrap>
     )
   }

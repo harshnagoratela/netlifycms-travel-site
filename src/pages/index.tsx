@@ -89,7 +89,6 @@ const IndexPage = ({ data }) => {
           </IntroductionFlex>
         </TextIntroduction>
       </BodyWrap>
-      <UpcomingEvents events={homedata.upcomingEvents} />
       <StoryBox />
       <LandingPageArticles />
       <CtaBanner />
