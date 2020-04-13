@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
@@ -63,11 +63,6 @@ const TextIntroductionText = styled.p`
 
 const IndexPage = ({ data }) => {
 
-  //create a state so that we can use it to check if it can be rendered while server side page generation or not
-  const [canRender, setCanRender] = useState(false);
-
-  useEffect(() => setCanRender(true));
-
   const homedata = data.markdownRemark.frontmatter;
   console.log(data);
 
@@ -94,12 +89,7 @@ const IndexPage = ({ data }) => {
           </IntroductionFlex>
         </TextIntroduction>
       </BodyWrap>
-      {
-        canRender ?
-        <UpcomingEvents events={homedata.upcomingEvents} />
-        : null
-      }
-      
+      <UpcomingEvents events={homedata.upcomingEvents} />
       <StoryBox />
       <LandingPageArticles />
       <CtaBanner />
