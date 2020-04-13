@@ -1,19 +1,17 @@
 ---
 templateKey: blog-post
-title: 'Guide to Hanami in Tokyo: The Best Parks, Times and Tips'
-date: 2020-03-24T14:46:40.766Z
+title: "Guide to Hanami in Tokyo: The Best Parks, Times and Tips"
+date: "2020-03-24T14:46:40.766Z"
 description: See COVID-19 Note for each park below
 featuredpost: true
 featuredimage: /img/sakura-shutterstock_1029669343-copy.jpg
 author:
-  name: 'Writtten by: Jessie Carbutt'
-  bio: >-
-    Originally from the UK, Jess lives, works and writes in Japan. A lover of
+  name: "Writtten by: Jessie Carbutt"
+  bio: Originally from the UK, Jess lives, works and writes in Japan. A lover of
     exploring and anything creative, she's always discovering new things in her
     Tokyo home.
   image: /img/jess-carbutt-profile-circle.png
 tags:
-  - Sakura
   - Tokyo
   - Nature
 ---
