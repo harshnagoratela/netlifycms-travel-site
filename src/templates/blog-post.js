@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
+import Img from "gatsby-image";
 import Layout from '../components/layout'
 import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
@@ -135,7 +136,7 @@ export const BlogPostTemplate = ({
             <Author>
               <h5>{(author && author.name) ? author.name : ""}</h5>
               <p>{(author && author.bio) ? author.bio : ""}</p>
-              <img src={(author && author.image) ? author.image.childImageSharp.fluid.src : ""} />
+              <Img fluid={author.image.childImageSharp.fluid} alt={(author && author.name) ? author.name : ""} />
             </Author>
           </div>
           <div>
