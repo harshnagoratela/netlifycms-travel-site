@@ -147,13 +147,6 @@ module.exports = {
       },
     }, // must be after other CSS plugins
     'gatsby-plugin-instagram-embed',
-    {
-      resolve: 'gatsby-plugin-html2amp',
-      options: {
-        files: ['**/*.html'],
-        dist: 'public/amp'
-      }
-    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
