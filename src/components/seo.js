@@ -8,6 +8,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useLocation } from "@reach/router"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -17,6 +18,7 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             description
             author
+            siteUrl
           }
         }
       }
@@ -24,6 +26,12 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+
+  const location = useLocation();
+  const canonicalUrl = location.href
+
+  //console.log("****** Location");
+  //console.log(location);
 
   return (
     <Helmet
@@ -54,6 +62,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:url`,
+          content: canonicalUrl,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -70,7 +82,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
   )
 }
 
