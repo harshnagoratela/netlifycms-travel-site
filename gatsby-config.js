@@ -164,7 +164,7 @@ module.exports = {
             },
           },
         },
-        canonicalBaseUrl: 'https://travelr.me/',
+        canonicalBaseUrl: 'https://netlifycms-travel-site.netlify.com/',
         components: ['amp-form'],
         excludedPaths: ['/404*', '/'],
         pathIdentifier: '/amp/',
