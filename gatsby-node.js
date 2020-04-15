@@ -54,6 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
       if (String(edge.node.frontmatter.templateKey) === "blog-post") {
         createPage({
           path: edge.node.fields.slug,
+          path: `${edge.node.fields.slug}amp`,
           tags: edge.node.frontmatter.tags,
           component: path.resolve(
             `src/templates/${String(edge.node.frontmatter.templateKey)}.amp.js`
