@@ -28,10 +28,11 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
 
   const location = useLocation();
-  const canonicalUrl = location.href
+  var re = /amp[\/]?$/;
+  const canonicalUrl = location.href.replace(re, "");
 
   //console.log("****** Location");
-  //console.log(location);
+  console.log(canonicalUrl);
 
   return (
     <Helmet
