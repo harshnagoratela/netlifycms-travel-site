@@ -29,7 +29,7 @@ function SEO({ description, lang, meta, title }) {
 
   const location = useLocation();
   var re = /amp[\/]?$/;
-  const canonicalUrl = location.href.replace(re, "");
+  const canonicalUrl = location.href ? location.href.replace(re, "") : ""
 
   //console.log("****** Location");
   console.log(canonicalUrl);
