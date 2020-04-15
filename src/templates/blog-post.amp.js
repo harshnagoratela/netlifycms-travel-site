@@ -1,18 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
+import _ from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link, useStaticQuery } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../components/layout.amp'
 import Content, { HTMLContent } from '../components/Content'
 import styled from 'styled-components'
 import { BodyWrap, HeaderBackground } from '../helpers/common'
-import Navbar from '../components/Navbar'
 import { smallerScreen } from '../helpers/breakpoints'
 import { useMediaQuery } from 'react-responsive'
 import DesktopBanner from '../components/DesktopBanner'
 import SEO from '../components/seo'
-import PageHeader from '../components/PageHeader'
+import PageHeader from '../components/PageHeader.amp'
 
 const MainTitle = styled.h1`
   margin-top: 60px;
@@ -42,11 +41,11 @@ const BlogBody = styled.div`
   }
 
   .gatsby-resp-image-wrapper, img {
-    max-width: 600px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: 0;
     ${smallerScreen} {
-      max-width: 100% !important;
+      max-width: 100%;
     }
   }
 `
@@ -117,6 +116,9 @@ export const BlogPostTemplate = ({
 }) => {
     const PostContent = contentComponent || Content
     const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
+
+    //removing lazy loading paramater as it was failing AMP validation
+    content = _.replace(content,new RegExp('loading="lazy"','g'),'')
 
     return (
         <Layout>
