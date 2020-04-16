@@ -11,7 +11,7 @@ author:
     A Japanese and Canadian student, studying in Tokyo, with a passion for food,
     animals, and adventuring. You can spot her studying in cute cafes on her off
     days.Thank you and I hope you have a great weekend.
-  image: /img/rei-ando-nemish.jpg
+  image: /img/90555533_646789835866774_7590224187273248768_n.jpg
 tags:
   - Solo Travel
 ---
