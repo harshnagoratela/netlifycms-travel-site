@@ -10,7 +10,6 @@ author:
   bio: A Japanese and Canadian student, studying in Tokyo, with a passion for
     food, animals, and adventuring. You can spot her studying in cute cafes on
     her off days.
-  image: ""
 tags:
   - Solo Travel
 ---
