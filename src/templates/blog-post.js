@@ -136,9 +136,7 @@ export const BlogPostTemplate = ({
             <Author>
               <h5>{(author && author.name) ? author.name : ""}</h5>
               <p>{(author && author.bio) ? author.bio : ""}</p>
-              {(author && author.image) &&
-                <Img fluid={author.image.childImageSharp.fluid} alt={(author && author.name) ? author.name : ""} />
-              }
+              <img src={(author && author.image) ? author.image.childImageSharp.fluid.src : ""} alt={(author && author.name) ? author.name : ""} />
             </Author>
           </div>
           <div>

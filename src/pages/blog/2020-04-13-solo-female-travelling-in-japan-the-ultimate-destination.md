@@ -7,11 +7,10 @@ description: |
 featuredimage: /img/solo-travel-shutterstock_623123315.jpg
 author:
   name: "Written by: Rei Ando Nemish"
-  bio: >
-    A Japanese and Canadian student, studying in Tokyo, with a passion for food,
-    animals, and adventuring. You can spot her studying in cute cafes on her off
-    days.Thank you and I hope you have a great weekend.
-  image: /img/90555533_646789835866774_7590224187273248768_n.jpg
+  bio: A Japanese and Canadian student, studying in Tokyo, with a passion for
+    food, animals, and adventuring. You can spot her studying in cute cafes on
+    her off days.
+  image: ""
 tags:
   - Solo Travel
 ---
