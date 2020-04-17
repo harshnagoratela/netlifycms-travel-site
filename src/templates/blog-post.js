@@ -60,6 +60,7 @@ h5 {
 p {
   font-size: 14px;
 }
+
 `
 
 const Topics = styled.div`
@@ -136,7 +137,9 @@ export const BlogPostTemplate = ({
             <Author>
               <h5>{(author && author.name) ? author.name : ""}</h5>
               <p>{(author && author.bio) ? author.bio : ""}</p>
-              <img src={(author && author.image) ? author.image.childImageSharp.fluid.src : ""} alt={(author && author.name) ? author.name : ""} />
+              {(author && author.image) &&
+                <Img fluid={author.image.childImageSharp.fluid} alt={(author && author.name) ? author.name : ""} style={{width: '100px', height: '100px'}} />
+              }
             </Author>
           </div>
           <div>
