@@ -48,10 +48,15 @@ exports.createPages = ({ actions, graphql }) => {
       }
     })
 
-    //Creating AMP pages for Blog pages
+    //Creating AMP pages for Blog pages, Karaoke page,.
     posts.forEach(edge => {
       const id = edge.node.id
-      if (String(edge.node.frontmatter.templateKey) === "blog-post") {
+      if (
+        String(edge.node.frontmatter.templateKey) === "blog-post"
+        || String(edge.node.frontmatter.templateKey) === "karaoke-page"
+        || String(edge.node.frontmatter.templateKey) === "about-page"
+        || String(edge.node.frontmatter.templateKey) === "contact-page"
+      ) {
         createPage({
           path: edge.node.fields.slug,
           path: `${edge.node.fields.slug}amp/`,
