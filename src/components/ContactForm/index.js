@@ -18,7 +18,7 @@ class ContactForm extends React.Component {
           id={name}
           name={name}
           action={action}
-		  target="_top"
+		      target="_top"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >

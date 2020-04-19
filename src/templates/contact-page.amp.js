@@ -55,7 +55,7 @@ const ContactPage = ({ data }) => {
                             />
                         </Col>
                         <Col>
-                            <ContactForm action="POST" />
+                            <ContactForm />
                         </Col>
                     </Row>
                 </PageBody>
