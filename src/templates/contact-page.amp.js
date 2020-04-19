@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { smallerScreen } from '../helpers/breakpoints'
 import SEO from '../components/seo'
 import PageHeader from '../components/PageHeader.amp'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/ContactForm.amp'
 
 const BodyWrap = styled.div`
     margin: 0 auto;
