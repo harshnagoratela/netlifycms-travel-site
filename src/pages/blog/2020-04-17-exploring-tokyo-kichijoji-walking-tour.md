@@ -10,6 +10,7 @@ author:
     exploring and anything creative, she's always discovering new things in her
     Tokyo home.
   name: "Written by: Jessie Carbutt"
+  image: /img/jess-carbutt-profile-circle.png
 tags:
   - Explore
 ---
