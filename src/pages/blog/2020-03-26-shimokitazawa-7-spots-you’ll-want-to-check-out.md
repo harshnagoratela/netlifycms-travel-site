@@ -7,6 +7,7 @@ featuredpost: true
 featuredimage: /img/shimokitazawa.jpg
 tags:
   - Explore
+  - Tokyo
 ---
 📌[Check out the whole list on Google Maps](https://goo.gl/maps/QSbUNvLr4XQb5jtC9)
 

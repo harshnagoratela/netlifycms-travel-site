@@ -13,6 +13,7 @@ author:
   image: /img/jess-carbutt-profile-circle.png
 tags:
   - Explore
+  - Tokyo
 ---
 📌[Check out the whole list on Google Maps](https://goo.gl/maps/nJfUgxk6afftWrv58)
 

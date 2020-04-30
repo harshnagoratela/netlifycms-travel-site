@@ -14,6 +14,7 @@ author:
   image: /img/90555533_646789835866774_7590224187273248768_n.jpg
 tags:
   - Solo Travel
+  - Tokyo
 ---
 Tokyo has the image of being an expensive city to travel to, considering Japan is one of the most advanced nations globally, it’s easy to see why. It’s certainly an expensive city to live in—Tokyo was named the [second most expensive nation](https://www.bloomberg.com/graphics/2019-most-expensive-cities-for-expats/) for expats to live in 2019, after Hong Kong. Despite its reputation, if you’re travelling through the capital city you might be pleasantly surprised by how much you can experience on a tight budget. Here are some recommendations of free things to do, cheap accommodation tips and travel hacks that won’t break the bank.
 

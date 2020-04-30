@@ -21,7 +21,7 @@ Planning your trip to Japan and want to know what you should do before your trip
 
 * You’re likely to find more English-speakers, signs and menus in big cities like Tokyo, Osaka and Kyoto compared to less-touristy places. Still, English isn’t one of Japan’s strongest points, which can be stressful when you’re alone.
 * Learning a few [essential basic phrases](https://www.nihongomaster.com/blog/21-essential-japanese-travel-phrases/) beforehand (and not sweating it when you can’t understand everything) can be really helpful. People will generally be happy to help you out regardless of their English (or your Japanese) ability!
-* The Lonely Planet has a [great book of essential Japanese for travel](https://shop.lonelyplanet.com/products/japanese-phrasebook-9). Its compact size is perfect for your bag. Plus, it’s a good way to pass time while you’re on the plane orshinkansenand don’t have a travel buddy to chat to.
+* The Lonely Planet has a [great book of essential Japanese for travel](https://shop.lonelyplanet.com/products/japanese-phrasebook-9). Its compact size is perfect for your bag. Plus, it’s a good way to pass time while you’re on the plane or shinkansen and don’t have a travel buddy to chat to.
 
 ![](/img/ryokan_genkan.jpg)
 
@@ -30,16 +30,16 @@ Planning your trip to Japan and want to know what you should do before your trip
 Most people don’t expect foreign travellers to know Japanese customs, so don’t worry too much. That being said, you might feel a tad self conscious if you’re in a situation where you’re: a) the only foreigner, b) alone and, c) you’re not sure how you should be doing something. Some main points to help you blend in and feel more at ease:
 
 * **Take your shoes off** at places like ryokan, hostels, some izakaya and at changing rooms. Point them facing outwards towards the door and wear any slippers provided.
-* **If you have tattoos**, you’ll probably be requested to cover them before usingonsenorsento(public bathhouse) or you might be denied entry entirely. Pack plasters or bands in your luggage that are large enough to completely cover your tattoos, just in case.
+* **If you have tattoos**, you’ll probably be requested to cover them before using onsen or sento (public bathhouse) or you might be denied entry entirely. Pack plasters or bands in your luggage that are large enough to completely cover your tattoos, just in case.
 * **Don’t tip**. It could actually be interpreted as rude.
-* **Be mindful of others on trains and buses**. Quiet conversation is ok, but don’t make phone calls or play loud music. Eating or drinking is fine on theshinkansenand coaches, but generally not appreciated on city metro systems and buses.
+* **Be mindful of others on trains and buses**. Quiet conversation is ok, but don’t make phone calls or play loud music. Eating or drinking is fine on the shinkansen and coaches, but generally not appreciated on city metro systems and buses.
 * More advice [here](https://matadornetwork.com/abroad/10-japanese-customs-you-must-know-before-a-trip-to-japan/).
 
 ![](/img/anete-lusina-gozxralnit4-unsplash.jpg)
 
 *Source: [Unsplash](https://unsplash.com/photos/GOZxrAlNIt4)*
 
-## 3. Consider the size of your luggage 
+## 3. Consider the size of your luggage
 
 * You’ll likely be doing a lot of walking, and as a solo traveller there’ll be no one else to help carry the load. If you can fit your stuff in a smaller case, or bring a little day bag, your travels will be a lot easier and your back will thank you.
 * Public transport doesn’t have much space for large suitcases, so avoid crowded rush hour trains if you’ve got big bags.

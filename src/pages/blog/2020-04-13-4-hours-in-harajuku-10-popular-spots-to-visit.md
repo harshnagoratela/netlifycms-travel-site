@@ -6,6 +6,7 @@ description: "4 Hours in Harajuku: 10 Popular Spots to Visit"
 featuredimage: /img/ivy-barn-u8ho6z05vh0-unsplash.jpg
 tags:
   - Explore
+  - Tokyo
 ---
 📌 [Check out the whole list on Google Maps](https://goo.gl/maps/NBT7FwcxzbbMDu5z5)
 
