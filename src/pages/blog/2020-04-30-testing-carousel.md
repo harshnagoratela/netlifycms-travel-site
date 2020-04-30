@@ -13,6 +13,8 @@ tags:
 ---
 Body Text 
 
+![Img-Alt](/img/16082626943_cfa4708f9a_c.jpg "Img-Title")
+
 ```
 <h2>H2 in Code Block</h2>
 ```
