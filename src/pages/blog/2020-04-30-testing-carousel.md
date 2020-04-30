@@ -15,7 +15,15 @@ youtube jhdqvqFHprw
 
 Body Text 
 
-![Img-Alt slider](/img/16082626943_cfa4708f9a_c.jpg "Img-Title")
+![Img-Alt slider thumbnail bordered](/img/16082626943_cfa4708f9a_c.jpg "Img-Title")
+
+![slider thumbnail bordered](/img/39688307565_9df87ba730_c.jpg "test1")
+
+![slider thumbnail bordered](/img/2726956817_8526313a72_k.jpg "test2")
+
+![slider thumbnail bordered](/img/39247118244_7c2fca6735_c.jpg "test3")
+
+![slider thumbnail bordered](/img/5281064532_1ebdac4210_o.jpg "test4")
 
 ```
 <h2>H2 in Code Block</h2>
