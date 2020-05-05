@@ -12,6 +12,7 @@ import Navbar from '../components/Navbar'
 import { smallerScreen } from '../helpers/breakpoints'
 import { useMediaQuery } from 'react-responsive'
 import DesktopBanner from '../components/DesktopBanner'
+import SidebarRecentPosts from '../components/SidebarRecentPosts'
 import SEO from '../components/seo'
 import PageHeader from '../components/PageHeader'
 
@@ -149,6 +150,8 @@ export const BlogPostTemplate = ({
               </TopicWrap>
             </Topics> */}
             <div>{!isMobile && <DesktopBanner />}</div>
+            <div>{!isMobile && <SidebarRecentPosts />}</div>
+            
           </div>
         </BlogBody>
       </BodyWrap>
