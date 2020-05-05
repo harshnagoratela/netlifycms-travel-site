@@ -19,8 +19,11 @@ const HeaderBackground = styled.div`
       rgba(162, 60, 160, 0.8),
       rgba(79,42,171, 0.8)
     ),url(${url})`};
-
   background-size: cover;
+
+  ${smallerScreen} {
+    height: 140px;
+  }
 `
 
 const MainTitle = styled.h1`
