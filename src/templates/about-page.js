@@ -13,6 +13,13 @@ const PageBody = styled.div`
   ${smallerScreen} {
     padding: 0 1rem;
   }
+
+  iframe {
+      height:560px;
+      ${smallerScreen} {
+          height:180px;
+      }
+  }
 `
 
 const PostTitle = styled.h1`

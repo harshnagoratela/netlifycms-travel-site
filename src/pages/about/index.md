@@ -28,7 +28,7 @@ Solo travel offers an array of incredible experiences and unforgettable memories
 
 Solo travel can certainly be more enjoyable and accessible to travelers if there was an easier way to meet people and join in on the adventure. Sure, exploring cities or relaxing at the beach by yourself might be fun, but some activities are way more enjoyable when done with others, such as food-tripping or going to a theme park. 
  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Rcfst6EEWcs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" src="https://www.youtube.com/embed/Rcfst6EEWcs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### TRAVELR: the answer to your solo-travel problems!
 
