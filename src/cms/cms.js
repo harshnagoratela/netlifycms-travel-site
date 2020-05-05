@@ -4,9 +4,6 @@ import cloudinary from 'netlify-cms-media-library-cloudinary'
 import BlogPostPreview from './preview-templates/BlogPostPreview'
 import AboutPagePreview from './preview-templates/AboutPagePreview'
 
-import YoutubeEditor from './netlify-cms-youtube-editor-widget'
-CMS.registerEditorComponent(YoutubeEditor);
-
 CMS.registerMediaLibrary(uploadcare)
 CMS.registerMediaLibrary(cloudinary)
 
