@@ -116,6 +116,7 @@ export const BlogPostTemplate = ({
   description,
   author,
   title,
+  featuredImage,
 }) => {
   const PostContent = contentComponent || Content
   const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
@@ -123,10 +124,7 @@ export const BlogPostTemplate = ({
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <PageHeader
-        title="Japan travel tips"
-        subtitle=" Food, places, people… We are writing about everything"
-      />
+      <PageHeader image={featuredImage} />
       <BodyWrap>
         <BlogBody>
           <div>
@@ -207,6 +205,7 @@ const BlogPost = ({ data }) => {
       tags={post.frontmatter.tags}
       author={post.frontmatter.author}
       title={post.frontmatter.title}
+      featuredImage={post.frontmatter.featuredimage}
     />
   )
 }
@@ -222,6 +221,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1200, quality: 100) {
+                ...GatsbyImageSharpFluid
+            }
+          }
+        }
         author {
           name
           bio

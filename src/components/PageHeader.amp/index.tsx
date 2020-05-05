@@ -42,7 +42,7 @@ const Subtitle = styled.p`
   text-shadow: 1px 1px rgba(0, 0, 0, 0.29);
 `
 
-const PageHeader = ({ title, subtitle }) => {
+const PageHeader = ({ title, subtitle, image }) => {
   const data = useStaticQuery(graphql`
     query {
       heroBackground: file(relativePath: { eq: "page_header.jpg" }) {
@@ -55,8 +55,10 @@ const PageHeader = ({ title, subtitle }) => {
     }
   `)
 
+  const headerimage = image ? image : data.heroBackground;
+
   return (
-    <HeaderBackground url={data.heroBackground.childImageSharp.fluid.src}>
+    <HeaderBackground url={headerimage.childImageSharp.fluid.src}>
       <Navbar />
       <BodyWrap>
         <MainTitle>{title}</MainTitle>
