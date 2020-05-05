@@ -119,7 +119,7 @@ export const BlogPostTemplate = ({
     const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
     //removing lazy loading paramater as it was failing AMP validation
-    content = _.replace(content,new RegExp('loading="lazy"','g'),'')
+    content = _.replace(content, new RegExp('loading="lazy"', 'g'), '')
 
     return (
         <Layout>
@@ -130,6 +130,14 @@ export const BlogPostTemplate = ({
                     <div>
                         <GoBack to="/blog">All articles ></GoBack>
                         <PostTitle>{title}</PostTitle>
+                        {featuredImage == null ? null : (
+                            <amp-img
+                                src={featuredImage.childImageSharp.fluid.src}
+                                width={featuredImage.childImageSharp.fluid.presentationWidth}
+                                height={featuredImage.childImageSharp.fluid.presentationHeight}
+                                layout="responsive"
+                            />
+                        )}
                         <p>{description}</p>
                         <PostContent content={content} />
                         <Author>

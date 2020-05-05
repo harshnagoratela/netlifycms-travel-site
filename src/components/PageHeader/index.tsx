@@ -22,7 +22,7 @@ const HeaderBackground = styled.div`
   background-size: cover;
 
   ${smallerScreen} {
-    height: 140px;
+    height: 70px;
   }
 `
 

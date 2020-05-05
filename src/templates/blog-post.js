@@ -112,105 +112,108 @@ const PostTitle = styled.h1`
 `
 
 export const BlogPostTemplate = ({
-  content,
-  contentComponent,
-  description,
-  author,
-  title,
-  featuredImage,
+    content,
+    contentComponent,
+    description,
+    author,
+    title,
+    featuredImage,
 }) => {
-  const PostContent = contentComponent || Content
-  const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
+    const PostContent = contentComponent || Content
+    const isMobile = useMediaQuery({ query: '(max-width: 992px)' })
 
-  return (
-    <Layout>
-      <SEO title={title} description={description} />
-      <PageHeader image={featuredImage} />
-      <BodyWrap>
-        <BlogBody>
-          <div>
-            <GoBack to="/blog">All articles ></GoBack>
-            <PostTitle>{title}</PostTitle>
-            <p>{description}</p>
-            <PostContent content={content} />
-            <Author>
-              <h5>{(author && author.name) ? author.name : ""}</h5>
-              <p>{(author && author.bio) ? author.bio : ""}</p>
-              {(author && author.image) &&
-                <Img fluid={author.image.childImageSharp.fluid} alt={(author && author.name) ? author.name : ""} style={{width: '100px', height: '100px'}} />
-              }
-            </Author>
-          </div>
-          <div>
-            {/*         <Topics>
+    return (
+        <Layout>
+            <SEO title={title} description={description} />
+            <PageHeader image={featuredImage} />
+            <BodyWrap>
+                <BlogBody>
+                    <div>
+                        <GoBack to="/blog">All articles ></GoBack>
+                        <PostTitle>{title}</PostTitle>
+                        {featuredImage == null ? null : (
+                            <Img fluid={featuredImage.childImageSharp.fluid} alt={title} /> 
+                        )}
+                        <p>{description}</p>
+                        <PostContent content={content} />
+                        <Author>
+                            <h5>{(author && author.name) ? author.name : ""}</h5>
+                            <p>{(author && author.bio) ? author.bio : ""}</p>
+                            {(author && author.image) &&
+                                <Img fluid={author.image.childImageSharp.fluid} alt={(author && author.name) ? author.name : ""} style={{ width: '100px', height: '100px' }} />
+                            }
+                        </Author>
+                    </div>
+                    <div>
+                        {/*         <Topics>
               <h3>Topics</h3>
               <TopicWrap>
                 <SingleTopic>Solo travels</SingleTopic>
                 <SingleTopic>Trekking</SingleTopic>
               </TopicWrap>
             </Topics> */}
-            <div>{!isMobile && <DesktopBanner />}</div>
-            <div>{!isMobile && <SidebarRecentPosts />}</div>
-            
-          </div>
-        </BlogBody>
-      </BodyWrap>
-    </Layout>
-  )
+                        <div>{!isMobile && <DesktopBanner />}</div>
+                        <div><SidebarRecentPosts /></div>
 
-  /*   return (
-      <section className="section">
-        {helmet || ''}
-        <div className="container content">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                {title}
-              </h1>
-              <p>{description}</p>
-              <PostContent content={content} />
-              {tags && tags.length ? (
-                <div style={{ marginTop: `4rem` }}>
-                  <h4>Tags</h4>
-                  <ul className="taglist">
-                    {tags.map(tag => (
-                      <li key={tag + `tag`}>
-                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
+                    </div>
+                </BlogBody>
+            </BodyWrap>
+        </Layout>
+    )
+
+    /*   return (
+        <section className="section">
+          {helmet || ''}
+          <div className="container content">
+            <div className="columns">
+              <div className="column is-10 is-offset-1">
+                <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
+                  {title}
+                </h1>
+                <p>{description}</p>
+                <PostContent content={content} />
+                {tags && tags.length ? (
+                  <div style={{ marginTop: `4rem` }}>
+                    <h4>Tags</h4>
+                    <ul className="taglist">
+                      {tags.map(tag => (
+                        <li key={tag + `tag`}>
+                          <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    ) */
+        </section>
+      ) */
 }
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+    const { markdownRemark: post } = data
 
-  return (
-    <BlogPostTemplate
-      content={post.html}
-      contentComponent={HTMLContent}
-      description={post.frontmatter.description}
-      helmet={
-        <Helmet titleTemplate="%s | Blog">
-          <title>{`${post.frontmatter.title}`}</title>
-          <meta
-            name="description"
-            content={`${post.frontmatter.description}`}
-          />
-        </Helmet>
-      }
-      tags={post.frontmatter.tags}
-      author={post.frontmatter.author}
-      title={post.frontmatter.title}
-      featuredImage={post.frontmatter.featuredimage}
-    />
-  )
+    return (
+        <BlogPostTemplate
+            content={post.html}
+            contentComponent={HTMLContent}
+            description={post.frontmatter.description}
+            helmet={
+                <Helmet titleTemplate="%s | Blog">
+                    <title>{`${post.frontmatter.title}`}</title>
+                    <meta
+                        name="description"
+                        content={`${post.frontmatter.description}`}
+                    />
+                </Helmet>
+            }
+            tags={post.frontmatter.tags}
+            author={post.frontmatter.author}
+            title={post.frontmatter.title}
+            featuredImage={post.frontmatter.featuredimage}
+        />
+    )
 }
 
 export default BlogPost
