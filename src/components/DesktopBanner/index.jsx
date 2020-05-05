@@ -76,7 +76,7 @@ const DesktopBanner = () => {
   `)
 
   return (
-    <Sticky enabled={true} top={40} bottomBoundary='#content'>
+    <Sticky enabled={false} top={40} bottomBoundary='#content'>
       <Wrapper>
         <Title>Ready to explore Japan?</Title>
 
