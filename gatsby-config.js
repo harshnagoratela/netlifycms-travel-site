@@ -173,6 +173,14 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://travelr.me',
+        sitemap: 'https://travelr.me/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: ['/tags/'] }]
+      }
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }
