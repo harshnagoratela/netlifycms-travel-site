@@ -199,8 +199,8 @@ export const ampPageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 1200, quality: 100) {
-                ...GatsbyImageSharpFluid
+            fluid(maxWidth: 1200, quality: 80) {
+                ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
