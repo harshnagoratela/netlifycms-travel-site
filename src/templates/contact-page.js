@@ -21,6 +21,20 @@ const PageBody = styled.div`
     padding: 0 1rem;
   }
 `
+const MobilePageHeader = styled.h1`
+  margin: 0px;
+  color: #fff;
+  padding-top: 20px;
+  padding-left: 20px;
+  letter-spacing: 0.01rem;
+  font-weight: 500;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.29);
+  display: none;
+  font-size: 1.7rem;
+  ${smallerScreen} {
+    display: block;
+  }
+`
 
 const Row = styled.div`
     &::after {
@@ -46,8 +60,9 @@ const ContactPage = ({ data }) => {
         <Layout>
             <SEO title={`Contact Us | Travelr app`} />
             <PageHeader title={data.markdownRemark.frontmatter.title} />
-            <BodyWrap>
+            <BodyWrap>                
                 <PageBody>
+                    <MobilePageHeader>{data.markdownRemark.frontmatter.title}</MobilePageHeader>
                     <Row>
                         <Col>
                             <div 
