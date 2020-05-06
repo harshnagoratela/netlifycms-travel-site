@@ -172,6 +172,7 @@ module.exports = {
         useAmpClientIdApi: true,
       },
     },
+    `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

@@ -34,6 +34,7 @@ const MainTitle = styled.h1`
   text-shadow: 2px 2px rgba(0, 0, 0, 0.29);
   ${smallerScreen} {
     font-size: 1.7rem;
+    display:none;
   }
 `
 
@@ -42,6 +43,9 @@ const Subtitle = styled.p`
   padding: 0 20px;
   letter-spacing: 0.01rem;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.29);
+  ${smallerScreen} {
+    display:none;
+  }
 `
 
 const PageHeader = ({ title, subtitle, image }) => {
