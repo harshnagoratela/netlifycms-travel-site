@@ -21,7 +21,7 @@ Shimokitazawa is known for curry. In fact, the town hosts an annual curry festiv
 
 #### 2. New York Joe Exchange
 
-Another major attraction of this town is vintage shopping. [New York Joe](http://newyorkjoeexchange.com/) now has several chain shops in Tokyo but it all started in Shimokitazawa. Believe it or not, the building used to be a bathhouse! “Bathhouse” translates toNyu-yoku-join Japanese, hence they named the shop “New York Joe”.
+Another major attraction of this town is vintage shopping. [New York Joe](http://newyorkjoeexchange.com/) now has several chain shops in Tokyo but it all started in Shimokitazawa. Believe it or not, the building used to be a bathhouse! “Bathhouse” translates to *Nyu-yoku-jo* in Japanese, hence they named the shop “New York Joe”.
 
 If you want to score great deals, drop by on the first Sunday of the month. Sales up 50% off take place every first Sunday, so make sure you have time to dig in the shop!
 
@@ -47,7 +47,7 @@ Source:<https://diskunion.net/shop/ct/shimokitazawa_club>
 
 #### 5. Zakoya
 
-Shimokitazawa also has tons of cheap but good izakaya like other areas. You will surely stumble upon a good one while walking but [Zakoya](http://www.zakoya.red/) has got to be the best. This very traditional Japanese izakaya located just a few minutes walk from the station features a menu that includes a lot of mouth-watering options. Whether you are vegetarian or a meat-lover, the best Izakaya experience is guaranteed here.
+Shimokitazawa also has tons of cheap but good izakaya like other areas. You will surely stumble upon a good one while walking but [Zakoya](http://www.zakoya.red/) has got to be the best. This very traditional Japanese izakaya located just a few minutes walk from the station features a menu that includes a lot of mouth-watering options. Whether you are vegetarian or a meat-lover, the best izakaya experience is guaranteed here.
 
 ![Zakoya Shimokitazawa](/img/zakoya.jpg "Zakoya")
 
@@ -65,7 +65,7 @@ Source:<https://www.coastertokyo.com/>
 
 ![](https://lh5.googleusercontent.com/XZf1aF3UY69a9qXmT8T-dP1R-6jkykur0SiZoZgN_mc2CowJQpgXmB_YMPqGYMA-oQWvDuR8IOet3V1bsdXq5XnpskQqBwnHpqYVDIhWqvLDsrhA52QJ6H_U_SU9tYypL7EA0-hV)
 
-Shimokitazawa’s music scene is very active. Live venues are spreading out across the town and Japanese Indie bands are performing every night. The entrance fee is around ¥2000-¥3000 and will let you see a couple of bands in one night! Whatever kind of music you dig, you’ll find it in Shimokitazawa.
+Shimokitazawa’s music scene is very active. Live venues are spreading out across the town and Japanese indie bands are performing every night. The entrance fee is around ¥2000-¥3000 and will let you see a couple of bands in one night! Whatever kind of music you dig, you’ll find it in Shimokitazawa.
 
 [Shimokitazawa Three and Basement Bar](https://toos.co.jp/basementbar/), which are next to each other, have been in the music scene for more than 20 years and have seen numerous bands get bigger and become popular. These places are also easy to find! Just walk down the street from Coaster and voila! You are in the perfect place to experience Japan’s indie music scene.
 

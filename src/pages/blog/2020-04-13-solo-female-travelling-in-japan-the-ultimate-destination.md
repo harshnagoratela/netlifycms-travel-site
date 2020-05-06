@@ -14,8 +14,6 @@ author:
 tags:
   - Solo Travel
 ---
-![](/img/solo-travel-shutterstock_623123315.jpg)
-
 Japan is an ideal destination for travelling for all, from its scenic views of nature to its abundance of cultural activities and traditional foods. It can also arguably be one of the best countries for female solo travellers, where you can have an incredible travelling experience with relative ease and a lot of fun. Also, Japan has an 'ohitorisama' culture or ‘doing it yourself’ culture, where you won't stand out for eating alone in a restaurant. The reasons for this range from the country’s impeccable safety all the way to the ladies-only advantages you can only find in Japan. If you’re interested, make sure to read on.
 
 ## Safety

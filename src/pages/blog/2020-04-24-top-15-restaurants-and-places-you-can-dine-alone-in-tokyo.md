@@ -42,7 +42,7 @@ Conveyor belt sushi (or *kaiten sushi*) is an exciting adventure in itself as yo
 
 ### **4. Street Food**
 
-Street food in Japan is both cheap and delicious, and it can be an insta-worthy experience as you film your *yakisoba* (stir-fried noodles) being cooked right in front of you. Head over to Ameya Yokocho, or Ameyoko for short as the locals call it, by Ueno Station. It’s a popular tourist destination, with around 400 shops. Each your way down the street, choosing from a kaleidoscope of different food stalls to choose from.
+Street food in Japan is both cheap and delicious, and it can be an insta-worthy experience as you film your *yakisoba* (stir-fried noodles) being cooked right in front of you. Head over to Ameya Yokocho, or Ameyoko for short as the locals call it, by Ueno Station. It’s a popular tourist destination, with around 400 shops. Eat your way down the street, choosing from a kaleidoscope of different food stalls.
 
 ![](/img/amyokomarket.jpg)
 
@@ -102,7 +102,7 @@ If you’ve already tried kaiten sushi and want to enjoy a luxurious sushi meal 
 
 ### **13. [Aka to Shimo](https://akatoshimo.owst.jp/en) (Sangenjaya)**
 
-This store accommodates solo diners, and allows them to have a *hitori-yakiniku* (one-person yakiniku)session at the counter with their own personal grill. You can eat mouth-watering wagyu beef per slice for cheap, and the majority of this place’s customers come alone.
+This store accommodates solo diners, and allows them to have a *hitori-yakiniku* (one-person yakiniku) session at the counter with their own personal grill. You can eat mouth-watering wagyu beef per slice for cheap, and the majority of this place’s customers come alone.
 
 ### **14. [Jiromaru](https://tabelog.com/en/tokyo/A1304/A130401/13171155/) (Kabukicho, Shinjuku)**
 

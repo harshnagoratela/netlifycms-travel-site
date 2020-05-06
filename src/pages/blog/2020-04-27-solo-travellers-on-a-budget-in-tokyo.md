@@ -63,7 +63,7 @@ You can still enjoy all that Tokyo has to offer while on a budget, as there are 
 * **Game centers** with most games here, like UFO catchers, starting at just ¥100, it can get addicting to try and win that stuffed doll. Don’t forget to snap your pictures at a *purikura* (photo booth).
 * **Drink** at your local izakaya, or grab a drink at the convenience store since you can drink while walking around on the streets in Tokyo. (But be careful about taking it inside shops or other buildings, it might not be allowed).
 * **Museums** are well worth a visit, and Tokyo has its fair share. Some popular places are the Yebisu Beer Museum (¥400), the National Museum of Modern Art (¥420), and the Cup Noodles Museum (¥500).
-* **Karaoke** is one of the local’s favorite forms of entertainment.There’s all-nighter programmes where you pay a set fee and can sing your heart out until the early hours of the morning, which work out cheaper overall.
+* **Karaoke** is one of the local’s favorite forms of entertainment. There’s all-nighter programmes where you pay a set fee and can sing your heart out until the early hours of the morning, which work out cheaper overall.
 
 ## Bargain shopping
 

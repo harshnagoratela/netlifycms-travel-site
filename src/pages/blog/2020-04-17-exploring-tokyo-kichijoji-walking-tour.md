@@ -17,10 +17,6 @@ tags:
 ---
 📌[Check out the whole list on Google Maps](https://goo.gl/maps/nJfUgxk6afftWrv58)
 
-![](/img/swan.jpg)
-
-*Image source: [co-trip.jp](https://co-trip.jp/article/146172/)*
-
 Kichijoji is just a 15-20 minute train ride from Shinjuku Station and one of my favourite neighbourhoods. It’s a trendy, popular area west of Tokyo, with a relaxed vibe compared to places like busy Shibuya. From vintage boutiques, spacious parks, a retro *shotengai* (shopping street) and a huge variety of cool restaurants and cafes, there really is something for everyone here. Have an afternoon free to go exploring? Check out this walking tour! 
 
 ### Overview:
