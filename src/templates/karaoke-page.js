@@ -95,7 +95,7 @@ const KaraokePage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={`Karaoke in Japan | Travelr app`} />
+      <SEO title={`Karaoke in Japan | Travelr app`} description={`Karaoke deals from Travelr. Show this screen at the reception to get this special deal at Karaokekan Shibuya.`} />
       <PageHeader
         title={post.frontmatter.title}
         subtitle={post.frontmatter.subtitle}

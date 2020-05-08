@@ -26,12 +26,12 @@ const PostTitle = styled.h1`
   margin-top: 10px;
 `
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const AboutPageTemplate = ({ title, description, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <>
-      <SEO title={`${title} | Travelr app`} />
+      <SEO title={`${title} | Travelr app`} description={description} />
       <PageHeader title={title} />
       <BodyWrap>
         <PageBody>
@@ -51,6 +51,7 @@ const AboutPage = ({ data }) => {
       <AboutPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
+        description={post.frontmatter.description}
         content={post.html}
       />
     </Layout>
@@ -65,6 +66,7 @@ export const aboutPageQuery = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }

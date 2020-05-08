@@ -28,7 +28,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 
   return (
     <>
-      <SEO title={`${title} | Travelr app`} />
+      <SEO title={`${title} | Travelr app`} description={`At Travelr, we empower people to discover the joy of solo travel and explore the world with no fear. Download Travelr app, browse all upcoming events and network with locals and travelers.`} />
       <PageHeader title={title} />
       <BodyWrap>
         <PageBody>

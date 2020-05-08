@@ -67,7 +67,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Share and experience Japan together | Travelr app" />
+      <SEO title="Travelr: Hang out with locals & travelers in Japan" description="Meet travelers and locals when you travel in Japan, and make new friends to hang out with! Travelr is the ultimate app to discover must-do activities and events in Japan hand-picked by locals." />
       <Hero title={homedata.title} subtitle={homedata.subtitle} />
       <GridImages />
       <BodyWrap>

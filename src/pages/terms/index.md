@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: Terms and conditions
+description: These terms and conditions outline the rules and regulations for the use of Travelr Inc.'s Website.
 ---
 
 Last Updated: November 1, 2019

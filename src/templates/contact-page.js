@@ -58,7 +58,7 @@ const ContactPage = ({ data }) => {
 
     return (
         <Layout>
-            <SEO title={`Contact Us | Travelr app`} />
+            <SEO title={`Contact Us | Travelr app`} description={`Travelr - For additional inquiries or comments, please contact us through this form.`}/>
             <PageHeader title={data.markdownRemark.frontmatter.title} />
             <BodyWrap>                
                 <PageBody>

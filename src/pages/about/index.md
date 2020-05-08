@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
 title: About TRAVELR
+description: At Travelr, we empower people to discover the joy of solo travel and explore the world with no fear. Download Travelr app, browse all upcoming events and network with locals and travelers.
 ---
 ## At TRAVELR, we empower people to discover the joy of solo travel and explore the world with no fear.
 
