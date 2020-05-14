@@ -131,10 +131,10 @@ export const BlogPostTemplate = ({
                     <div>
                         <GoBack to="/blog">All articles ></GoBack>
                         <PostTitle>{title}</PostTitle>
+                        <p>{description}</p>
                         {featuredImage == null ? null : (
                             <Img fluid={featuredImage.childImageSharp.fluid} alt={title} /> 
                         )}
-                        <p>{description}</p>
                         <PostContent content={content} />
                         <Author>
                             <h5>{(author && author.name) ? author.name : ""}</h5>

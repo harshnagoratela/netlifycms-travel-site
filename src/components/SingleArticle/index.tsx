@@ -53,7 +53,7 @@ const SingleArticle = ({ post }) => {
         />
       </Link>
       <Text fontSizes={1} color="textPrimary" lineHeight="27px" mt={15}>
-        {post.excerpt}
+        {post.frontmatter.description}
       </Text>
       <ReadMore to={post.fields.slug}>
         <ReadButton>Read full story</ReadButton>
