@@ -200,7 +200,7 @@ export const ampPageQuery = graphql`
         featuredimage {
           childImageSharp {
             fluid(maxWidth: 1200, quality: 80) {
-                ...GatsbyImageSharpFluid_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
