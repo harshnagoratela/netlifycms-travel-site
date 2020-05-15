@@ -3,6 +3,7 @@ templateKey: blog-post
 title: "10 Things You Should Know Before Your Solo Travel to Japan "
 date: 2020-04-24T12:06:52.275Z
 description: "10 Things You Should Know Before Your Solo Travel to Japan "
+featuredpost: true
 featuredimage: /img/places-to-visit-in-tokyo.jpg
 author:
   name: "Written by: Jessie Carbutt"

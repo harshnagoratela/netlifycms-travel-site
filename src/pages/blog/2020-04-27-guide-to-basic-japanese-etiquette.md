@@ -3,6 +3,7 @@ templateKey: blog-post
 title: "Guide to Basic Japanese Etiquette "
 date: 2020-04-27T11:54:58.052Z
 description: "7 Things You Must Know about Japanese Customs and Manners "
+featuredpost: true
 featuredimage: /img/jezael-melgoza-wipnpstgink-unsplash.jpg
 author:
   bio: >+

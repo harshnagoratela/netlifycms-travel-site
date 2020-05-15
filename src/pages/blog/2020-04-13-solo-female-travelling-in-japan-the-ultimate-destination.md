@@ -4,6 +4,7 @@ title: "Solo Female Travelling in Japan: The Ultimate Destination "
 date: 2020-04-13T13:48:08.064Z
 description: |
   Solo Female Travelling in Japan: The Ultimate Destination 
+featuredpost: true
 featuredimage: /img/solo-travel-shutterstock_623123315.jpg
 author:
   name: "Written by: Rei Ando Nemish"

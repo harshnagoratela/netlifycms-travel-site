@@ -3,7 +3,7 @@ templateKey: blog-post
 title: "Guide to Hanami in Tokyo: The Best Parks, Times and Tips"
 date: 2020-03-24T14:46:40.766Z
 description: See COVID-19 Note for each park below
-featuredpost: true
+featuredpost: false
 featuredimage: /img/sakura-shutterstock_1029669343-copy.jpg
 author:
   name: "Written by: Jessie Carbutt"
