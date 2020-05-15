@@ -130,6 +130,7 @@ export const BlogPostTemplate = ({
                     <div>
                         <GoBack to="/blog">All articles ></GoBack>
                         <PostTitle>{title}</PostTitle>
+                        <p>{description}</p>
                         {featuredImage == null ? null : (
                             <amp-img
                                 src={featuredImage.childImageSharp.fluid.src}
@@ -137,8 +138,7 @@ export const BlogPostTemplate = ({
                                 height={featuredImage.childImageSharp.fluid.presentationHeight}
                                 layout="responsive"
                             />
-                        )}
-                        <p>{description}</p>
+                        )}                        
                         <PostContent content={content} />
                         <Author>
                             <h5>{(author && author.name) ? author.name : ""}</h5>
@@ -199,7 +199,7 @@ export const ampPageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 640, quality: 75) {
+            fluid(maxWidth: 600) {
                 ...GatsbyImageSharpFluid_noBase64
             }
           }
