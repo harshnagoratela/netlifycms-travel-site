@@ -199,8 +199,8 @@ export const ampPageQuery = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid(maxWidth: 1200, quality: 80) {
-                ...GatsbyImageSharpFluid_withWebp_noBase64
+            fluid(maxWidth: 640, quality: 75) {
+                ...GatsbyImageSharpFluid_noBase64
             }
           }
         }
