@@ -8,6 +8,7 @@ import { BlogBody } from '../pages/blog'
 import SingleArticle from '../components/SingleArticle'
 import DesktopBanner from '../components/DesktopBanner'
 import SEO from '../components/seo'
+import Helmet from "react-helmet"
 import PageHeader from '../components/PageHeader'
 
 class TagRoute extends React.Component {
@@ -18,6 +19,9 @@ class TagRoute extends React.Component {
     return (
       <Layout>
         <SEO title={`${tag} articles | Travelr app`} />
+		<Helmet>
+			<link rel="canonical" href="/blog/" />
+		</Helmet>
         <PageHeader
           title={tag}
           subtitle="Read about interesting Japan travel tips"

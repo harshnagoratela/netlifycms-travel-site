@@ -15,19 +15,19 @@ tags:
   - Tokyo
   - Nature
 ---
-## What is *Hanami*?
+## What is hanami?
 
-Lucky enough to be visiting Tokyo when the sakura (cherry blossom) is in bloom around the end of March and start of April? At this time of year, local parks across Tokyo transform into buzzing hubs as friends, families, couples and colleagues enjoy the traditional custom of hanami (sakura viewing). With its short life-span, cherry blossom has become a symbol of the transient beauty of nature in Japan, and appreciating this during hanami involves picnicking beneath the cherry trees, relaxing and enjoying the falling blossoms. 
+Lucky enough to be visiting Tokyo when the *sakura* (cherry blossom) is in bloom around the end of March and start of April? At this time of year, local parks across Tokyo transform into buzzing hubs as friends, families, couples and colleagues enjoy the traditional custom of *hanami* (sakura viewing). With its short life-span, cherry blossom has become a symbol of the transient beauty of nature in Japan, so hanami involves picnicking beneath the cherry trees, relaxing and appreciating the beauty of the falling blossoms. 
 
 If you want to do your own hanami, there’s no need to do much prep in advance, and you don’t even have to travel far from the city centre to enjoy Tokyo’s lush green spaces. Read on to find out tips on how to hanami like a local and discover all the most popular, picnic-friendly parks in the capital. 
 
-## When to Hanami?
+## When to hanami in Tokyo?
 
-First bloom in Tokyo is predicted for March 15, with the peak predicted around March 23. You’ll still be able to enjoy hanami up until early April. However, some parks, like Shinjuku Gyoen National Garden, have many varieties of cherry trees that can bloom for longer. You can check updates on the forecast here.
+For 2020, the first bloom in Tokyo is predicted for March 15, with the peak predicted around March 23. You’ll still be able to enjoy hanami up until early April. However, some parks, like Shinjuku Gyoen National Garden, have many varieties of cherry trees that can bloom for longer. You can check updates on the forecast here.
 
 ![Source: https://sakura.weathermap.jp/en.php](/img/sakura_front_800x450.png)
 
-## How to Hanami
+## How to hanami
 
 Enjoying hanami is very simple. It essentially involves bringing snacks, picnic food and drinks to a park and setting up camp with a picnic mat. While you might see some families armed with cooler bags, thermos flasks, homemade bento, games and all the picnic paraphernalia you can imagine, it really isn’t essential and most people just stop by a combini or supermarket to pick up snacks and drinks as they’re on their way to the park. 
 
@@ -37,13 +37,13 @@ At this time of year, Japan’s combini (convenience stores) and supermarket she
 
 Extra tip: If you’d like to treat yourself to something slightly fancier, head to the basement floors of department stores (like Marui, Tobu or Seibu) and check out their seasonal selection of springtime goodies.
 
-**Blue Sheets** 
+**Blue sheets** 
 
 You’ll notice that basically everyone enjoying hanami is sitting on a blue sheet. It’s not technically essential, but it’ll make your hanami experience far better than sitting in the dirt or getting wet if the ground is damp from any rainfall. Head to a 100 yen shop or a local Don Quijote store to pick up this blue tarp (or buruu shiito/ ブルーシートin Japanese). 
 
 Extra tip: You can also pick up some cheap disposable cups, napkins, chopsticks etc here if you’re buying food to share with a group. 
 
-## Five of the best Hanami spots across Tokyo
+## Five of the best hanami spots across Tokyo
 
 So you’ve kitted yourself out with a blue sheet, combini goodies and sakura snacks. Now it’s time to head to the park! Luckily, you don’t have to travel far out of the capital to enjoy green spaces in Tokyo during spring. Here’s five of some of Tokyo’s best parks that are all close to the centre of the city and popular with hanami picnickers: 
 
@@ -80,7 +80,7 @@ COVID-19 Note: Ueno Park will be open as usual, but gathering in large groups wi
 
 ![](/img/16082626943_cfa4708f9a_c.jpg)
 
-Source: https://www.flickr.com/photos/31029865@N06/16082626943\
+Source: https://www.flickr.com/photos/31029865@N06/16082626943
 Credit: Dick Thomas Johnson 
 
 ## Inokashira Park
@@ -96,7 +96,7 @@ COVID-19 NOTE: Inokashira Park will be open as usual, but gathering in large gro
 
 ![](/img/shinjuku_gyoen_national_garden_-_sakura_10.jpg)
 
-Source: https://commons.wikimedia.org/wiki/File:Shinjuku_Gyoen_National\_Garden\_-_sakura_10.jpg\
+Source: https://commons.wikimedia.org/wiki/File:Shinjuku_Gyoen_National_Garden_-_sakura_10.jpg
 Credit: [Kakidai](https://commons.wikimedia.org/wiki/User:Kakidai)
 
 ## Shinjuku Gyoen National Garden
