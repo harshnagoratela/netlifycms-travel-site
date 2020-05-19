@@ -54,21 +54,21 @@ const GridImages = () => {
     query {
       grid1: file(relativePath: { eq: "landing-grid/grid_1.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 460) {
+          fluid(maxHeight: 216) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       grid2: file(relativePath: { eq: "landing-grid/grid_2.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 460) {
+          fluid(maxHeight: 216) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       grid3: file(relativePath: { eq: "landing-grid/grid_3.jpg" }) {
         childImageSharp {
-          fluid(maxHeight: 460) {
+          fluid(maxHeight: 216) {
             ...GatsbyImageSharpFluid
           }
         }

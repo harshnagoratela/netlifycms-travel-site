@@ -60,14 +60,14 @@ const DesktopBanner = () => {
       }
       appstore: file(relativePath: { eq: "appstore.png" }) {
         childImageSharp {
-          fluid(maxHeight: 220) {
+          fluid(maxHeight: 140) {
             ...GatsbyImageSharpFluid
           }
         }
       }
       googleplay: file(relativePath: { eq: "googleplay.png" }) {
         childImageSharp {
-          fluid(maxHeight: 220) {
+          fluid(maxHeight: 140) {
             ...GatsbyImageSharpFluid
           }
         }
